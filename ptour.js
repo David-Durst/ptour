@@ -8,6 +8,7 @@ if (Meteor.isClient) {
       // template data, if any, is available in 'this'
       if (typeof console !== 'undefined')
         console.log("You pressed the button");
+      Meteor.call("foo");
     }
   });
 }
@@ -15,5 +16,8 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
+    Meteor.methods({
+        foo: function () { console.log("hi");}
+    });
   });
 }
