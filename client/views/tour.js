@@ -1,9 +1,7 @@
-Template.tour.helper({
-    drawTour: function() {
+Template.tour.rendered = function() {
         var camera, scene, renderer;
 
         var texture_placeholder, isUserInteracting = false, onMouseDownMouseX = 0, onMouseDownMouseY = 0, lon = 0, onMouseDownLon = 0, lat = 0, onMouseDownLat = 0, phi = 0, theta = 0;
-
 
         init();
         animate();
@@ -23,7 +21,7 @@ Template.tour.helper({
             geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
 
             var material = new THREE.MeshBasicMaterial( {
-                map: THREE.ImageUtils.loadTexture( 'textures/2294472375_24a3b8ef46_o.jpg' )
+                map: THREE.ImageUtils.loadTexture( 'testTexture.jpg' )
             });
 
             mesh = new THREE.Mesh( geometry, material );
@@ -144,6 +142,5 @@ Template.tour.helper({
 
             renderer.render( scene, camera );
 
-        }
     }
-});
+};
