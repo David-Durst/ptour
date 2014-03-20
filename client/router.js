@@ -10,7 +10,7 @@ Router.map(function () {
 
     this.route('tour', {
         path: '/tour',
-        template: 'tour'
+        template: 'tour',
     });
 });
 
