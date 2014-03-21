@@ -21,7 +21,7 @@ Template.tour.rendered = function() {
             geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
 
             var material = new THREE.MeshBasicMaterial( {
-                map: THREE.ImageUtils.loadTexture( 'testTexture.jpg' )
+                map: THREE.ImageUtils.loadTexture( 'fristNorth.JPG' )
             });
 
             mesh = new THREE.Mesh( geometry, material );
