@@ -1,4 +1,4 @@
-Template.tour.engine = function () {
+Template.tour.engine = function (THREE) {
     var ret = {}
 
     ret.texture_placeholder, ret.isUserInteracting = false, ret.onPointerDownPointerX = 0, ret.onPointerDownPointerY = 0, ret.lon = 0, ret.onPointerDownLon = 0, ret.lat = 0, ret.onPointerDownLat = 0, ret.phi = 0, ret.theta = 0;
@@ -142,4 +142,4 @@ Template.tour.engine = function () {
 
     }
     return ret;
-} ();
+};
