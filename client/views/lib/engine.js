@@ -141,5 +141,24 @@ Template.tour.engine = function (THREE) {
         ret.renderer.render( ret.scene, ret.camera );
 
     }
+
+    ret.changeImage = function () {
+
+        ret.scene = new THREE.Scene();
+
+        var geometry = new THREE.SphereGeometry( 500, 60, 40 );
+        geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
+
+        var material = new THREE.MeshBasicMaterial( {
+	    map: THREE.ImageUtils.loadTexture( Session.get('location') )
+        });	    
+
+        mesh = new THREE.Mesh( geometry, material );
+
+        ret.scene.add( mesh );
+	ret.lat = 0.0
+	ret.lon = 0.0
+    }
+
     return ret;
 };
