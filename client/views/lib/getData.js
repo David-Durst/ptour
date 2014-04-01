@@ -1,14 +1,14 @@
-AD = 1;
 Template.tour.getData = function () {
-    StopList = new Meteor.Collection("stopList"); 
-    ImageList = {};
+    var StopImagesStore = new FS.Store.GridFS("stopImagesStore");
+    var StopImages = new FS.Collection("stopImages", {stores: [StopImagesStore]});
+    var StopList = new Meteor.Collection("stopList"); 
     Meteor.subscribe("stopList", function () {
-        StopList.find({}).forEach(function (stop) {
-            ImageList[stop.name] = new Meteor.Collection(stop.name);
-            //look at http://docs.mongodb.org/manual/reference/operator/query/in/
-            //for smart subscriptions
-            Meteor.subscribe(stop.name);
-        });
+        //look at http://docs.mongodb.org/manual/reference/operator/query/in/
+        //for smart subscriptions
+        Meteor.subscribe("stopImages", 
+            StopList.find({}, {fields: {name: 1}}).map( function(d) {
+                return d.name;
+        }));
     });
-    return {"StopList": StopList, "ImageList": ImageList};
+    return {"StopList": StopList, "StopImages": StopImages};
 }
