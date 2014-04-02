@@ -1,5 +1,41 @@
 <template name="tour">
-    tour is in maintenance.
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="ptour-navbar container-fluid">
+    <ul class="nav nav-pills">
+      <li class=""><a href="#">Ptour</a></li>
+      <li><a href="#">Explore <span class="caret"></span></a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Audio</a></li>
+          <li><a href="#">Text</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<div id="container">
+  <div class="maintenance">
+    <h1>Tour is in maintenance.</h1>
+  </div>
+
+  <div class="overlays-left">
+    <div class="info">
+      <h2>Title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, deleniti quidem tenetur quae quo accusantium dignissimos suscipit nobis. </p>
+    </div>
+    <div class="map">
+
+    </div>
+  </div>
+
+  <div class="overlays-right">
     <button onclick=Template.tour.changeLocation()>Change Location</button>
-    <div id="container"></div>
+  </div>
+</div>
+
+
+
 </template>
