@@ -3,6 +3,11 @@ Template.tour.engine = function (THREE) {
 
     ret.texture_placeholder, ret.isUserInteracting = false, ret.onPointerDownPointerX = 0, ret.onPointerDownPointerY = 0, ret.lon = 0, ret.onPointerDownLon = 0, ret.lat = 0, ret.onPointerDownLat = 0, ret.phi = 0, ret.theta = 0;
 
+    ret.getUrl = function () {
+        return Template.tour.data.StopList.findOne(
+            {id:Session.get('locId')}).imgUrl;
+    }
+
     ret.init = function () {
 
         var container, mesh;
@@ -18,7 +23,7 @@ Template.tour.engine = function (THREE) {
         geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
 
         var material = new THREE.MeshBasicMaterial( {
-            map: THREE.ImageUtils.loadTexture( 'fristNorth.JPG' )
+            map: THREE.ImageUtils.loadTexture( ret.getUrl() )
         });
 
         mesh = new THREE.Mesh( geometry, material );
@@ -150,7 +155,7 @@ Template.tour.engine = function (THREE) {
         geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
 
         var material = new THREE.MeshBasicMaterial( {
-	    map: THREE.ImageUtils.loadTexture( Session.get('location') )
+	    map: THREE.ImageUtils.loadTexture( ret.getUrl()  )
         });	    
 
         mesh = new THREE.Mesh( geometry, material );
