@@ -8,3 +8,5 @@ cfs-filesystem
 collectionFS
 iron-router
 cfs-gridfs
+bootstrap3-less
+less

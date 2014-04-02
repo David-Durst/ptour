@@ -2,6 +2,7 @@
   "packages": {
     "iron-router": {},
     "collectionFS": {},
-    "cfs-filesystem": {}
+    "cfs-filesystem": {},
+    "bootstrap3-less": {}
   }
 }
