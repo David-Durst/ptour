@@ -44,7 +44,7 @@ var dirs = fs.readdirSync(pub).filter(function (file) {
 for(var i = 0; i < dirs.length; i++) {
     var imgJSON = 
         JSON.parse((fs.readFileSync(pub + dirs[i] + "/img.json", 'ascii')));
-    imgJSON.imgUrl = Meteor.absoluteUrl() + dirs[i] + "/img.JPG";
+    imgJSON.imgUrl = dirs[i] + "/img.JPG";
     //imgJSON.imgUrl = Meteor.absoluteUrl() + "testTexture.jpg";
     StopList.insert(imgJSON);
     //console.log("hi");
