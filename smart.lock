@@ -20,8 +20,8 @@
       },
       "cfs-filesystem": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-filesystem.git",
-        "tag": "v0.0.18",
-        "commit": "b8d4997e6c08bab33b971c75209a8a049b8e4322"
+        "tag": "v0.0.19",
+        "commit": "ead59322755b81194254cbe726bf427e930c5172"
       },
       "bootstrap3-less": {
         "git": "https://github.com/eprochasson/bootstrap3-less",
@@ -35,8 +35,8 @@
       },
       "cfs-base-package": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-base-package.git",
-        "tag": "v0.0.14",
-        "commit": "ca3b540db2efaa27c66f70057bb575336cca5cfb"
+        "tag": "v0.0.15",
+        "commit": "83f31eb7286292978eb3b572d8f7f51616fdc600"
       },
       "cfs-file": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-file.git",
@@ -70,8 +70,8 @@
       },
       "cfs-storage-adapter": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-storage-adapter.git",
-        "tag": "v0.0.18",
-        "commit": "a6dd87623186c760f4808869b545730ad5b6100d"
+        "tag": "v0.0.19",
+        "commit": "aef2e56e67994b0467a875465aac66a24dedbd5d"
       },
       "cfs-filesaver": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-filesaver.git",
@@ -95,8 +95,8 @@
       },
       "cfs-gridfs": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-gridfs.git",
-        "tag": "v0.0.14",
-        "commit": "7da36ad68ef6c30d3186cd690f53a3e6e76c7402"
+        "tag": "v0.0.15",
+        "commit": "57252851116d10b70dcf893475702b744de8c69d"
       },
       "cfs-tempstore": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-tempstore.git",

@@ -9,14 +9,14 @@ Template.tour.rendered = function() {
 };
 
 Meteor.startup(function () {
-    Session.set('location', 'fristNorth.JPG');
+    Session.set('locId', 1);
 });
 
 Template.tour.changeLocation = function () {
-    if (Session.get('location') === 'fristNorth.JPG')
-	Session.set('location', 'mccosh.JPG');
+    if (Session.get('locId') == 1)
+	Session.set('locId', 2);
     else
-	Session.set('location', 'fristNorth.JPG');
+	Session.set('locId', 1);
 
     Template.tour.engine.changeImage();
 }

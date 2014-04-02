@@ -18,7 +18,7 @@ Template.tour.engine = function (THREE) {
         geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
 
         var material = new THREE.MeshBasicMaterial( {
-            map: THREE.ImageUtils.loadTexture( 'fristNorth.JPG' )
+            map: THREE.ImageUtils.loadTexture( "http://localhost:3000/pub-fristNorth/img.JPG" )
         });
 
         mesh = new THREE.Mesh( geometry, material );
@@ -142,6 +142,11 @@ Template.tour.engine = function (THREE) {
 
     }
 
+    ret.getUrl = function () {
+        return Template.tour.data.StopList.findOne(
+            {id:Session.get('locId')}).imgUrl;
+    }
+
     ret.changeImage = function () {
 
         ret.scene = new THREE.Scene();
@@ -150,7 +155,7 @@ Template.tour.engine = function (THREE) {
         geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
 
         var material = new THREE.MeshBasicMaterial( {
-	    map: THREE.ImageUtils.loadTexture( Session.get('location') )
+	    map: THREE.ImageUtils.loadTexture( ret.getUrl()  )
         });	    
 
         mesh = new THREE.Mesh( geometry, material );
