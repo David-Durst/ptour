@@ -32,6 +32,25 @@ Template.tour.setLocation = function (name, description) {
             function (err, res) {console.log(JSON.stringify(res));});
     }
 }
+//Taken from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+// Returns a random integer between min and max
+// Using Math.round() will give you a non-uniform distribution!
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+Template.tour.getRandomPoint = function () {
+    var points = 
+        Template.tour.data.StopList.findOne({id: Session.get('locId')}).points;
+    //NOTE: remove in final code, 1 in 2^62 possibility of array out of bounds
+    //issue, see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    Template.tour.setFocus(points, getRandomInt(0, points.length - 1));
+}
+
+Template.tour.setFocus = function (arr, index) {
+    Template.tour.engine.lat = arr[index].pLat;
+    Template.tour.engine.lon = arr[index].pLon;
+}
 
 Template.tour.isDebug = function () {
     return Meteor.absoluteUrl().indexOf('localhost') != -1;

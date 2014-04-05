@@ -1,1 +1,6 @@
-{"id":1,"name":"Frist North","description":"The north is harsh plain, full of unexpected dangers.","points":[],"imgUrl":"pub-fristNorth/img.JPG","jsonFile":"../../../../../public/pub-fristNorth/img.json","_id":"7a5ogjcdh7AdsPmGG"}
+{
+      "id":1,
+      "name":"Frist North",
+      "description": "The north is harsh plain, full of unexpected dangers.",
+      "points": [{"pLat":12.600000000000001,"pLon":16.7,"pName":"wadaw","pDescription":"awewad"},{"pLat":28.6,"pLon":54.2,"pName":"awdawd","pDescription":"aeawewae"}]
+}
