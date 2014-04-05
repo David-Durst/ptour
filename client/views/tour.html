@@ -33,6 +33,9 @@
 
   <div class="overlays-right">
     <button onclick=Template.tour.changeLocation()>Change Location</button>
+    {{#if isDebug}}
+    <button onclick=Template.tour.setLocation()>Set Location</button>
+    {{/if}}
   </div>
 </div>
 

@@ -20,3 +20,19 @@ Template.tour.changeLocation = function () {
 
     Template.tour.engine.changeImage();
 }
+
+//Produce a popup asking for name and description, put it in the file on the
+//server.
+Template.tour.setLocation = function (name, description) {
+    var name = prompt("Name:");
+    var descr = prompt("Description:");
+    if (name != null && name.length > 0 && descr != null && descr.length > 0) {
+        Meteor.call('setLatLon', Session.get('locId'), Template.tour.engine.lat, 
+            Template.tour.engine.lon, name, descr, 
+            function (err, res) {console.log(JSON.stringify(res));});
+    }
+}
+
+Template.tour.isDebug = function () {
+    return Meteor.absoluteUrl().indexOf('localhost') != -1;
+}
