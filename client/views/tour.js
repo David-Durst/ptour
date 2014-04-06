@@ -1,9 +1,11 @@
 Template.tour.rendered = function() {
 
     Template.tour.data = Template.tour.getData( function () {
-        Template.tour.engine = Template.tour.engine(THREE);
+        Template.tour.engine = Template.tour.engineOverlays(THREE,
+            Template.tour.engine(THREE));
         Template.tour.engine.init();
         Template.tour.engine.animate();
+        Template.tour.engine.drawPoints();
     });
 
 };
@@ -19,6 +21,7 @@ Template.tour.changeLocation = function () {
 	Session.set('locId', 1);
 
     Template.tour.engine.changeImage();
+    Template.tour.engine.drawPoints();
 }
 
 //Produce a popup asking for name and description, put it in the file on the
@@ -27,7 +30,10 @@ Template.tour.setLocation = function (name, description) {
     var name = prompt("Name:");
     var descr = prompt("Description:");
     if (name != null && name.length > 0 && descr != null && descr.length > 0) {
-        Meteor.call('setLatLon', Session.get('locId'), Template.tour.engine.lat, 
+        Meteor.call('setLatLon', Session.get('locId'), 
+        Template.tour.engine.camera.target.closeX, 
+        Template.tour.engine.camera.target.closeY,
+        Template.tour.engine.camera.target.closeZ, Template.tour.engine.lat, 
             Template.tour.engine.lon, name, descr, 
             function (err, res) {console.log(JSON.stringify(res));});
     }

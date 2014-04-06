@@ -1,7 +1,7 @@
 Template.tour.engine = function (THREE) {
     var ret = {}
 
-    ret.texture_placeholder, ret.isUserInteracting = false, ret.onPointerDownPointerX = 0, ret.onPointerDownPointerY = 0, ret.lon = 0, ret.onPointerDownLon = 0, ret.lat = 0, ret.onPointerDownLat = 0, ret.phi = 0, ret.theta = 0;
+    ret.texture_placeholder, ret.isUserInteracting = false, ret.onPointerDownPointerX = 0, ret.onPointerDownPointerY = 0, ret.lon = 0, ret.onPointerDownLon = 0, ret.lat = 0, ret.onPointerDownLat = 0, ret.phi = 0, ret.theta = 0, ret.rho = 500, ret.rhoRatio = 0.3;
 
     ret.getUrl = function () {
         return Template.tour.data.StopList.findOne(
@@ -19,7 +19,7 @@ Template.tour.engine = function (THREE) {
 
         ret.scene = new THREE.Scene();
 
-        var geometry = new THREE.SphereGeometry( 500, 60, 40 );
+        var geometry = new THREE.SphereGeometry( ret.rho, 60, 40 );
         geometry.applyMatrix( new THREE.Matrix4().makeScale( -1, 1, 1 ) );
 
         var material = new THREE.MeshBasicMaterial( {
@@ -132,11 +132,16 @@ Template.tour.engine = function (THREE) {
         ret.phi = THREE.Math.degToRad( 90 - ret.lat );
         ret.theta = THREE.Math.degToRad( ret.lon );
 
-        ret.camera.target.x = 500 * Math.sin( ret.phi ) * Math.cos( ret.theta );
-        ret.camera.target.y = 500 * Math.cos( ret.phi );
-        ret.camera.target.z = 500 * Math.sin( ret.phi ) * Math.sin( ret.theta );
+        ret.camera.target.x = ret.rho * Math.sin( ret.phi ) * Math.cos( ret.theta );
+        ret.camera.target.y = ret.rho * Math.cos( ret.phi );
+        ret.camera.target.z = ret.rho * Math.sin( ret.phi ) * Math.sin( ret.theta );
+
+        ret.camera.target.closeX = ret.camera.target.x * ret.rhoRatio
+        ret.camera.target.closeY = ret.camera.target.y * ret.rhoRatio
+        ret.camera.target.closeZ = ret.camera.target.z * ret.rhoRatio
 
         ret.camera.lookAt( ret.camera.target );
+        
 
         /*
         // distortion

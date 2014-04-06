@@ -1,10 +1,13 @@
 fnHolder.defineMethods = function (obj) {
     Meteor.methods({
-        setLatLon: function (locId, lat, lon, name, description) {
+        setLatLon: function (locId, x, y, z, lat, lon, name, description) {
             if (fnHolder.isDebug()) {
                 var loc = obj.StopList.findOne({id:locId});
                 obj.StopList.update(loc, {
                     $push : { points : {
+                    pX: x,
+                    pY: y,
+                    pZ: z,
                     pLat: lat,
                     pLon: lon,
                     pName: name,
