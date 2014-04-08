@@ -44,6 +44,8 @@ Template.tour.engine = function (THREE) {
 
         window.addEventListener( 'resize', onWindowResize, false );
 
+	Template.tour.changeAudio();
+
     }
 
     function onWindowResize() {

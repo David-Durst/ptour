@@ -12,7 +12,7 @@
         </ul>
       </li>
     </ul>
-
+    <button onclick=Template.tour.doSearch()>Search</button>
   </div>
 </nav>
 
@@ -34,12 +34,14 @@
   <div class="overlays-right">
     <button onclick=Template.tour.changeLocation()>Change Location</button>
     <button onclick=Template.tour.getRandomPoint()>Change Point</button>
+    <audio id="audio" controls>
+      <source id="mp3Source" type="audio/mpeg">
+	<embed height="50" width="100">
+    </audio>
     {{#if isDebug}}
     <button onclick=Template.tour.setLocation()>Set Location</button>
     {{/if}}
   </div>
 </div>
-
-
 
 </template>

@@ -17,6 +17,7 @@ fnHolder.fillDB = function (obj) {
         var imgJSON = 
             JSON.parse((obj.fs.readFileSync(obj.pub + dirs[i] + "/img.json", 'ascii')));
         imgJSON.imgUrl = dirs[i] + "/img.JPG";
+	imgJSON.mp3Url = dirs[i] + "/img.mp3";
         imgJSON.jsonFile = "../../../../../public/" + dirs[i] + "/img.json";
         obj.StopList.insert(imgJSON);
     }     

@@ -2,5 +2,6 @@
       "id":9,
       "name":"Art Museum",
       "description": "Art Museum and McCormick Hall",
+      "tags": [],
       "points": [] 
 }

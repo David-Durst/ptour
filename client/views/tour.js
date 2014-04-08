@@ -18,6 +18,7 @@ Template.tour.changeLocation = function () {
 	Session.set('locId', ((Session.get('locId') +1)% 10)  );
     Template.tour.engine.changeImage();
     Template.tour.engine.drawPoints();
+    Template.tour.changeAudio();
 }
 
 //Produce a popup asking for name and description, put it in the file on the
@@ -56,4 +57,23 @@ Template.tour.setFocus = function (arr, index) {
 
 Template.tour.isDebug = function () {
     return Meteor.absoluteUrl().indexOf('localhost') != -1;
+}
+
+Template.tour.changeAudio = function () {
+    var audio = document.getElementById('audio');
+    var source = document.getElementById('mp3Source');
+    source.src=  Template.tour.data.StopList.findOne(
+	{id:Session.get('locId')}).mp3Url;
+    audio.load();
+    audio.play();
+}
+
+Template.tour.doSearch = function (query) {
+    var query = prompt("Query:");
+    if (query != null && query.length > 0) {
+	var results = Template.tour.data.StopList.find({tags: query});
+	results.forEach(function (res) {
+	    console.log(res.name);
+	});
+    }
 }
