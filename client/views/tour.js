@@ -15,11 +15,7 @@ Meteor.startup(function () {
 });
 
 Template.tour.changeLocation = function () {
-    if (Session.get('locId') == 1)
-	Session.set('locId', 2);
-    else
-	Session.set('locId', 1);
-
+	Session.set('locId', ((Session.get('locId') +1)% 10)  );
     Template.tour.engine.changeImage();
     Template.tour.engine.drawPoints();
     Template.tour.changeAudio();
