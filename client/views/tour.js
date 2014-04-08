@@ -15,7 +15,7 @@ Meteor.startup(function () {
 });
 
 Template.tour.changeLocation = function () {
-	Session.set('locId', ((Session.get('locId') +1)%9)  );
+	Session.set('locId', ((Session.get('locId') +1)% 10)  );
     Template.tour.engine.changeImage();
     Template.tour.engine.drawPoints();
 }
