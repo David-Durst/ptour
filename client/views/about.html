@@ -1,4 +1,4 @@
-<template name="home">
+<template name="about">
 
 
 <div class="wrap">
@@ -12,13 +12,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="">Ptour</a>
+          <a class="navbar-brand" href="{{pathFor 'home'}}">Ptour</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="{{pathFor 'about'}}">About</a></li>
-            <li><a href="{{pathFor 'contact'}}">Contact</a></li>
             <li><a href="{{pathFor 'team'}}">Team</a></li>
+            <li><a href="{{pathFor 'contact'}}">Contact</a></li>
             <li><a href="{{pathFor 'more'}}">More</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -26,13 +26,14 @@
     </div>
 
   <div id="header">
-    <div class="container">
+    <div class="container about">
       <div class="row">
-        <div class="col-lg-6">
-          <h1>Welcome to Ptour</h1>
-          <h2 class="subtitle">The Orange Key Virtual Campus Tour of <br><a href="http://www.princeton.edu/main/" target="_blank">Princeton University</a></h2>
-          <p>Sometimes its hard to visit another college campus, especially when you live far away. This tour is geared towards prospective students and those who are interested in learning more about <a href="http://www.princeton.edu/main/" target="_blank">Princeton University</a>.</p>
-          <p>Ready when you are!</p>
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+          <h1>Orange Key Tours</h1>
+          <h2 class="subtitle">A Longstanding Princeton Tradition</h2>
+          <p> The <a href="http://www.princeton.edu/~oktour/orangekey/" target="_blank">Orange Key Guide Service</a> is a student organization at Princeton University whose members focused on sharing Princeton's history, tradition, and culture with the broader community. Orange Key tours serve as the primary means for prospective students and visitors to learn about the University through individual perspectives of undergraduate students.</p>
+          <p>Orange Key offers 20 tours per week with a few exceptions such as University holidays and operates with support of the Admission Office.Orange Key tours cover many aspects of Princeton life, from academic information and campus life to University history and architectural details.</p>
+
           <a class='btn-lg btn-default btn-custom' href="{{pathFor 'tour'}}">Tour</a>
         </div>
 
