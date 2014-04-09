@@ -1,80 +1,20 @@
 @import "/packages/bootstrap3-less/bootstrap.import.less";
 //@import "/packages/bootstrap3-less/buttons.import.less";
 
-/* ==== Google font ==== */
+/* Google font */
 @import url('http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
-
-canvas {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-.ptour-navbar {
-  margin-top: 5px;
-}
-
-.maintenance {
-  position: absolute;
-  color: #ffffff;
-  z-index: 100;
-  display: block;
-  top:78px;
-  left:25px;
-}
-
-.overlays-left {
-  position: absolute;
-  z-index: 100;
-  display: block;
-  bottom:1%;
-  left:1%;
-  width: 25%;
-  height: 60%;
-  background-color:rgba(70,70,70,0.5);
-}
-
-.info {
-  height: 50%;
-  width: 100%;
-  text-align: center;
-}
-
-.info h2, p {
-  color: #ffffff;
-}
-
-.map {
-  background-color:rgba(220,220,220,1.0);
-  opacity: 80%;
-  height: 40%;
-  width: 90%;
-  margin: auto;
-}
-
-.overlays-right {
-  position: absolute;
-  z-index: 100;
-  display: block;
-  bottom:1%;
-  right:1%;
-  width: 15%;
-  height: 20%;
-  background-color:rgba(70,70,70,0.5);
-}
 
 
 /****************** Custom *******************/
-
 .wrap {
   background-color: #f2f2f2;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6em;
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -112,13 +52,13 @@ p.fineprint {
 }
 
 a {
-    color: #ffffff;
-    word-wrap: break-word;
-    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
+  color: #ffffff;
+  word-wrap: break-word;
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
 a:hover,
@@ -136,8 +76,13 @@ a:after {
     -o-transition: color 0.1s ease-in, background 0.1s ease-in;
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
+
 .navbar-inverse .navbar-nav > li > a {
-    color: #c6d550;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .alignleft {
@@ -174,12 +119,13 @@ a:after {
 }
 
 a.navbar-brand {
-  color: #fff !important;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
   font-weight: 900;
   text-transform: uppercase;
 }
-a.navbar-brand:hover {
-    color: #ddd !important;
+a.navbar-brand:hover,a.navbar-brand:focus {
+  color: #000;
 }
 
 /* Header */
@@ -272,3 +218,113 @@ a.content:hover,a.content:focus {
 
 /******************** tour.html *********************/
 
+canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.navbar-inverse .navbar-nav > li > a.ptour-nav-link:focus,
+.navbar-inverse .navbar-nav > li > a.ptour-nav-link:hover, {
+  color: #fd680e;
+}
+
+.navbar-inverse .navbar-nav > li > a.navbar-brand:focus,
+.navbar-inverse .navbar-nav > li > a.navbar-brand:hover  {
+  color: #fd680e;
+}
+
+.navbar-input-group {
+  font-size: 0px; /*removes whitespace between button and input*/
+}
+
+.navbar-input-group input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.navbar-input-group .btn {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: 0px;
+}
+
+.overlays-left {
+  position: absolute;
+  z-index: 100;
+  display: block;
+  bottom:1%;
+  left:1%;
+  width: 25%;
+  height: 60%;
+  background-color:rgba(70,70,70,0.5);
+}
+
+.info {
+  height: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.info h2, p {
+  color: #ffffff;
+}
+
+.info h2 {
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.info p {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.map {
+  background-color:rgba(220,220,220,1.0);
+  opacity: 80%;
+  height: 40%;
+  width: 90%;
+  margin: auto;
+}
+
+.overlays-right {
+  position: absolute;
+  z-index: 100;
+  display: block;
+  bottom:1%;
+  right:1%;
+  width: 15%;
+  height: 20%;
+  background-color:rgba(70,70,70,0.5);
+}
+
+.maintenance {
+  position: absolute;
+  color: #ffffff;
+  z-index: 100;
+  display: block;
+  top:135px;
+  left:25px;
+}
+.maintenance h1{
+  color: #ffffff;
+}
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  height: 100px;
+  z-index: 100;
+  position: absolute;
+  top:50px;
+}
+
+.graph {
+  overflow:hidden;
+}
+
+.graph a{
+  text-align: center;
+}

@@ -1,42 +1,76 @@
 <template name="tour">
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="ptour-navbar container-fluid">
-    <ul class="nav nav-pills">
-      <li class=""><a href="{{pathFor 'home'}}">Ptour</a></li>
-      <li><a href="#">Explore <span class="caret"></span></a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Audio</a></li>
-          <li><a href="#">Text</a></li>
-        </ul>
-      </li>
-    </ul>
-    <button onclick=Template.tour.doSearch()>Search</button>
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="ptour-nav-link navbar-brand" href="{{pathFor 'home'}}">Ptour</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="ptour-nav-link dropdown-toggle" data-toggle="dropdown" href="#">Explore <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a class="ptour-nav-link" href="#">Audio</a></li>
+            <li><a class="ptour-nav-link" href="#">Text</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="ptour-nav-link dropdown-toggle" data-toggle="dropdown" href="#">Settings <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a class="ptour-nav-link" href="#">Audio</a></li>
+            <li><a class="ptour-nav-link" href="#">Text</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="navbar-form navbar-left navbar-input-group" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button onclick=Template.tour.doSearch() type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+    </form>
+
+
+    </div><!--/.nav-collapse -->
   </div>
-</nav>
+</div>
 
 <div id="container">
   <div class="maintenance">
     <h1>Tour is in maintenance.</h1>
   </div>
 
+  <div class="graph container-full">
+    <ul class="nav nav-pills">
+      <li><a href="#"><div class="col-sm-3"><img class="img-circle grayscale" src="http://placekitten.com/100/100"></div></a></li>
+      <li><a href="#"><div class="col-sm-3"><img class="img-circle grayscale" src="http://placekitten.com/100/100"></div></a></li>
+      <li><a href="#"><div class="col-sm-3"><img class="img-circle grayscale" src="http://placekitten.com/100/100"></div></a></li>
+    </ul>
+
+  </div>
+
   <div class="overlays-left">
     <div class="info">
-      <h2>Title</h2>
+      <h2>Wow, much wow!</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, deleniti quidem tenetur quae quo accusantium dignissimos suscipit nobis. </p>
     </div>
-    <div class="map">
-
-    </div>
+    <div class="map"></div>
   </div>
 
   <div class="overlays-right">
-    <button onclick=Template.tour.changeLocation()>Change Location</button>
+    <button onclick=Template.tour.changeLocationPrev()>Prev</button>
+    <button onclick=Template.tour.changeLocationNext()>Next</button>
     <button onclick=Template.tour.getRandomPoint()>Change Point</button>
     <audio id="audio" controls>
       <source id="mp3Source" type="audio/mpeg">
-	<embed height="50" width="100">
+    <embed height="50" width="300">
     </audio>
     {{#if isDebug}}
     <button onclick=Template.tour.setLocation()>Set Location</button>

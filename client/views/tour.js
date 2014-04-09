@@ -14,8 +14,14 @@ Meteor.startup(function () {
     Session.set('locId', 1);
 });
 
-Template.tour.changeLocation = function () {
+Template.tour.changeLocationNext = function () {
 	Session.set('locId', ((Session.get('locId') +1)% 10)  );
+    Template.tour.engine.changeImage();
+    Template.tour.engine.drawPoints();
+    Template.tour.changeAudio();
+}
+Template.tour.changeLocationPrev = function () {
+    Session.set('locId', ((Session.get('locId') -1)% 10)  );
     Template.tour.engine.changeImage();
     Template.tour.engine.drawPoints();
     Template.tour.changeAudio();
@@ -27,11 +33,11 @@ Template.tour.setLocation = function (name, description) {
     var name = prompt("Name:");
     var descr = prompt("Description:");
     if (name != null && name.length > 0 && descr != null && descr.length > 0) {
-        Meteor.call('setLatLon', Session.get('locId'), 
-        Template.tour.engine.camera.target.closeX, 
+        Meteor.call('setLatLon', Session.get('locId'),
+        Template.tour.engine.camera.target.closeX,
         Template.tour.engine.camera.target.closeY,
-        Template.tour.engine.camera.target.closeZ, Template.tour.engine.lat, 
-            Template.tour.engine.lon, name, descr, 
+        Template.tour.engine.camera.target.closeZ, Template.tour.engine.lat,
+            Template.tour.engine.lon, name, descr,
             function (err, res) {console.log(JSON.stringify(res));});
     }
 }
@@ -43,7 +49,7 @@ function getRandomInt(min, max) {
 }
 
 Template.tour.getRandomPoint = function () {
-    var points = 
+    var points =
         Template.tour.data.StopList.findOne({id: Session.get('locId')}).points;
     //NOTE: remove in final code, 1 in 2^62 possibility of array out of bounds
     //issue, see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
