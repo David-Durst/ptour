@@ -4,6 +4,7 @@
     "collectionFS": {},
     "cfs-filesystem": {},
     "bootstrap3-less": {},
-    "fontawesome4": {}
+    "fontawesome4": {},
+    "ionicons": {}
   }
 }

@@ -6,7 +6,8 @@
       "collectionFS": {},
       "cfs-filesystem": {},
       "bootstrap3-less": {},
-      "fontawesome4": {}
+      "fontawesome4": {},
+      "ionicons": {}
     },
     "packages": {
       "iron-router": {
@@ -33,6 +34,11 @@
         "git": "https://github.com/chrismbeckett/meteor-fontawesome4.git",
         "tag": "v1.0.0",
         "commit": "fe38ec775e974f0f7855d1693dc74fd4f1b4848c"
+      },
+      "ionicons": {
+        "git": "https://github.com/Pagebakers/meteor-ionicons.git",
+        "tag": "v1.4.1",
+        "commit": "c3c07eba87d42ef900c9c61323ce4499bdce3204"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
