@@ -3,6 +3,7 @@
     "iron-router": {},
     "collectionFS": {},
     "cfs-filesystem": {},
-    "bootstrap3-less": {}
+    "bootstrap3-less": {},
+    "fontawesome4": {}
   }
 }

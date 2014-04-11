@@ -63,7 +63,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #FD680E;
+    color: #fff;
     text-decoration: none;
     outline: 0;
 }
@@ -117,6 +117,47 @@ a:after {
 .navbar-custom {
   background: #fd680e;
 }
+.navbar-nav > li {
+  text-align: center;
+}
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:hover {
+  background-color: #fd680e;
+  font-weight: bolder;
+}
+
+.cl-effect-1 a {
+  padding: 0 0 5px;
+}
+
+.cl-effect-1 a::after {
+  position: absolute;
+  top: 92%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  content: '';
+  opacity: 0;
+  -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  -o-transition: height 0.3s, opacity 0.3s, -o-transform 0.3s;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::after {
+  height: 5px;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
 
 a.navbar-brand {
   font-family: 'Lato', sans-serif;
@@ -187,15 +228,19 @@ p.copyright {
 
 a.footanchor {
   color: #fff !important;
-  text-transform: uppercase;
+  // text-transform: uppercase;
+  border-bottom: thin white;
+  border-bottom-style: solid;
 }
 a.footanchor:hover {
-    color: #000 !important;
+  color: #000 !important;
+  border-bottom-style: none;
 }
 a.footanchor:focus {
   color: #000;
   text-decoration: none;
   outline: 0;
+  border-bottom-style: none;
 }
 
 /* Content */
@@ -327,4 +372,8 @@ canvas {
 
 .graph a{
   text-align: center;
+}
+
+.graph li {
+  display: inline-block;
 }
