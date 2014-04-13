@@ -3,6 +3,12 @@ Template.tour.engine = function (THREE) {
 
     ret.texture_placeholder, ret.isUserInteracting = false, ret.onPointerDownPointerX = 0, ret.onPointerDownPointerY = 0, ret.lon = 0, ret.onPointerDownLon = 0, ret.lat = 0, ret.onPointerDownLat = 0, ret.phi = 0, ret.theta = 0, ret.rho = 500, ret.rhoRatio = 0.3;
 
+    ret.pointClicked = function (intersects) {
+        //Do nothing for now, gets overwritten later.
+        //this should just handle overzealous clickers.
+        //EngineOverlays.js handles actual logic.
+    }
+
     ret.getUrl = function () {
         return Template.tour.data.StopList.findOne(
             {id:Session.get('locId')}).imgUrl;
@@ -17,6 +23,9 @@ Template.tour.engine = function (THREE) {
         ret.camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1100 );
         ret.camera.target = new THREE.Vector3( 0, 0, 0 );
 
+        ret.projector = new THREE.Projector();
+        ret.raycaster = new THREE.Raycaster();
+
         ret.scene = new THREE.Scene();
 
         var geometry = new THREE.SphereGeometry( ret.rho, 60, 40 );
@@ -27,6 +36,8 @@ Template.tour.engine = function (THREE) {
         });
 
         mesh = new THREE.Mesh( geometry, material );
+
+        mesh.clickable = false;
 
         ret.scene.add( mesh );
 
@@ -68,6 +79,20 @@ Template.tour.engine = function (THREE) {
 
         ret.onPointerDownLon = ret.lon;
         ret.onPointerDownLat = ret.lat;
+
+        var vec = new THREE.Vector3((event.clientX / window.innerWidth) * 2 - 1,
+            -(event.clientY / window.innerHeight) * 2 + 1, 1);
+
+        ret.projector.unprojectVector(vec, ret.camera);
+
+        ret.raycaster.set(ret.camera.position, vec.sub(ret.camera.position).normalize());
+
+        ret.intersects = ret.raycaster.intersectObjects(ret.scene.children);
+        //        alert(ret.scene.children);
+        
+        if (ret.intersects.length > 1) {
+            ret.pointClicked(ret.intersects);
+        }
 
     }
 
@@ -166,6 +191,7 @@ Template.tour.engine = function (THREE) {
         });	    
 
         mesh = new THREE.Mesh( geometry, material );
+        mesh.clickable = false;
 
         ret.scene.add( mesh );
 	ret.lat = 0.0
