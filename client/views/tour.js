@@ -2,7 +2,7 @@ Template.tour.rendered = function() {
 
     Template.tour.data = Template.tour.getData( function () {
         Template.tour.engine = Template.tour.engineOverlays(THREE,
-            Template.tour.engine(THREE));
+            Template.tour.engine(THREE, Template.tour.idManipulation({})));
         Template.tour.engine.init();
         Template.tour.engine.animate();
         Template.tour.engine.drawPoints();
@@ -15,13 +15,13 @@ Meteor.startup(function () {
 });
 
 Template.tour.changeLocationNext = function () {
-	Session.set('locId', ((Session.get('locId') +1)% 10)  );
+	Template.tour.engine.setNext();
     Template.tour.engine.changeImage();
     Template.tour.engine.drawPoints();
     Template.tour.changeAudio();
 }
 Template.tour.changeLocationPrev = function () {
-    Session.set('locId', ((Session.get('locId') -1)% 10)  );
+    Template.tour.engine.setPrev();
     Template.tour.engine.changeImage();
     Template.tour.engine.drawPoints();
     Template.tour.changeAudio();
