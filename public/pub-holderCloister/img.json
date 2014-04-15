@@ -1,7 +1,9 @@
 {
       "id":7,
+      "next":8,
+      "prev":6,
       "name":"Holder Cloister",
-      "description": "Holder Cloister",
-      "tags": [],
+      "description": "Holder Cloister is part of Rockefeller College, one of Princeton's six residential colleges.",
+      "tags": ["Rockefeller","Rocky","college","residential","living","housing","freshman"],
       "points": [] 
 }

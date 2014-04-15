@@ -3,7 +3,7 @@
       "next":3,
       "prev":1,
       "name":"University Chapel",
-      "description": "Chapel.",
-      "tags": [],
+      "description": "The University Chapel is the third largest college chapel in the world.",
+      "tags": ["religious","religion","service","choir","worship","weddings"],
       "points": [] 
 }

@@ -1,7 +1,9 @@
 {
       "id":6,
+      "next":7,
+      "prev":5,
       "name":"Dillon Gymnasium",
-      "description": "Dillon Gymnasium",
-      "tags": [],
+      "description": "Dillon Gymnasium is the non-varsity gym facility on campus.",
+      "tags": ["exercise","gym","fitness","intramural","sports"],
       "points": [] 
 }

@@ -1,7 +1,9 @@
 {
       "id":5,
+      "next":6,
+      "prev":4,
       "name":"McCosh",
-      "description": "McCosh Courtyard",
-      "tags": ["lecture"],
+      "description": "McCosh Hall, which houses the English department, contains large lecture halls and small seminar rooms.",
+      "tags": ["lecture","english"],
       "points": []
 }

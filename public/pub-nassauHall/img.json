@@ -1,7 +1,9 @@
 {
       "id":4,
+      "next":5,
+      "prev":3,
       "name":"Nassau Hall",
-      "description": "Nassau Hall",
-      "tags": [],
+      "description": "Nassau Hall, the oldest building on campus, endured shelling during the Revolutionary War. It served as the meeting place for the New Jersey State Legislature and the Continental Congress.",
+      "tags": ["war","president","FitzRandolph","gate","trustees","congress"],
       "points": [] 
 }
