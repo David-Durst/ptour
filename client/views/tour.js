@@ -6,6 +6,8 @@ Template.tour.rendered = function() {
         Template.tour.engine.init();
         Template.tour.engine.animate();
         Template.tour.engine.drawPoints();
+	Template.tour.setUpAutoComplete();
+	document.getElementById("searchBox").focus();
     });
 
 };
@@ -83,3 +85,28 @@ Template.tour.doSearch = function (query) {
 	});
     }
 }
+
+Template.tour.setUpAutoComplete = function () {
+    var stops = Template.tour.data.StopList.find({});
+    var suggestions = [];
+    
+    stops.forEach(function (stop) {
+	for (var i = 0; i < stop.tags.length; i++) {
+	    var suggestion = {
+		value: stop.id, 
+		label: stop.tags[i] + " (" + stop.name + ")"
+	    };
+	    suggestions.push(suggestion);
+	}
+    });
+    
+    $("#searchBox").autocomplete({
+	source: suggestions,
+	select: function( event, ui) {
+	    Session.set('locId', ui.item.value);
+	    Template.tour.engine.changeImage();
+	    Template.tour.engine.drawPoints();
+	    Template.tour.changeAudio();
+	}
+    });
+};
