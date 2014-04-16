@@ -6,8 +6,31 @@
 
 
 /****************** Custom *******************/
+// html {
+//   height:100%;
+//   width: 100%;
+// }
+/* TRY THIS ON HTML TAG ANYWAY, FIX THE HEIGHT!!!! ARGH */
+body {
+  // min-height: 850px;
+  height:100%;
+  width: 100%;
+  margin-bottom: -50px;
+  background-clip: content-box;
+  background: url(../landing/blair.jpg) no-repeat center center fixed;
+  // background: url(../landing/blair_blur_10px.jpg) no-repeat center center fixed;
+  // background: url(../landing/blair_crowd.jpg) no-repeat center center fixed;
+  // background: url(../landing/blair_crowd_blur_05px.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  text-align: center;
+}
+
 .wrap {
-  background-color: #f2f2f2;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -15,6 +38,8 @@
   line-height: 1.6em;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
+  height:100%;
+  margin-bottom: 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,8 +71,6 @@ p.fineprint {
 }
 
 .about {
-  // background-color: black;
-  // opacity: 0.5;
   margin-top: -75px;
 }
 
@@ -97,20 +120,28 @@ a:after {
 }
 
 .btn-theme  {
+  position: relative;
   color: #fff;
   background-color: #fd680e;
   border-color: #fd680e;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 .btn-theme:hover  {
   color: #fff;
-  background-color: #444;
-  border-color: #444;
+  background-color: #DB5A0C;
+  border-color: #DB5A0C;
 }
-
-.btn-custom {
-  background-color: #fd680e;
-  border-color: #fd680e;
-  color:#fff;
+a.btn-theme:active {
+  -webkit-transform: translatey(3px);
+  -moz-transform: translatey(3px);
+  -ms-transform: translatey(3px);
+  -o-transform: translatey(3px);
+  transform: translatey(3px);
 }
 
 /* Nav */
@@ -171,28 +202,11 @@ a.navbar-brand:hover,a.navbar-brand:focus {
 
 /* Header */
 #header {
-  background-color: #444;
-  background: url(../landing/blair.jpg) no-repeat center top;
-  opacity: 0.9;
-  // -webkit-filter: blur(1px);
-  // filter: blur(10px);
   margin-top: -20px;
   padding-top: 150px;
-  background-attachment: relative;
-  background-position: center center;
-  min-height: 650px;
+  // height:100%;
+  // min-height: 650px;
   width: 100%;
-
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
   text-align: center;
 }
 
@@ -217,13 +231,21 @@ h2.subtitle {
 
 /* footer */
 #footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height: 50px;
   background: #fd680e;
-  padding: 20px 0 5px;
+  padding: 12px 0 5px;
+  opacity: 0.9;
 }
 
 p.copyright {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   color: #fff;
   text-align: center;
+  font-size: 17px;
 }
 
 a.footanchor {
@@ -269,6 +291,10 @@ canvas {
   left: 0px;
 }
 
+div.navbar {
+  opacity: 0.92;
+}
+
 .navbar-inverse .navbar-nav > li > a.ptour-nav-link:focus,
 .navbar-inverse .navbar-nav > li > a.ptour-nav-link:hover, {
   color: #fd680e;
@@ -302,8 +328,12 @@ canvas {
   bottom:1%;
   left:1%;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
+  -moz-transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
+  -o-transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
   transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
   background-color: rgba(0,0,0,0.4);
 }
