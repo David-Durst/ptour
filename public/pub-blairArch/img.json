@@ -1,9 +1,9 @@
 {
       "id":3,
-      "next":1,
+      "next":4,
       "prev":2,
       "name":"Blair Arch",
-      "description": "Blair Arch",
-      "tags": [],
+      "description": "Blair Hall was the University's first collegiate Gothic dormitory.",
+      "tags": ["Mathey","college","residential","living","housing","freshman"],
       "points": [] 
 }

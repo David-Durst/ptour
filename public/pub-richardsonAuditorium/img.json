@@ -1,7 +1,9 @@
 {
       "id":8,
+      "next":9,
+      "prev":7,
       "name":"Richardson Auditorium",
-      "description": "Richardson Auditorium in Alexander Hall",
-      "tags": [],
+      "description": "Richardson Auditorium in Alexander Hall is the premier performance venue on campus.",
+      "tags": ["concert","performance","music","auditorium"],
       "points": []
 }

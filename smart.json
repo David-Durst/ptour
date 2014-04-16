@@ -5,6 +5,7 @@
     "cfs-filesystem": {},
     "bootstrap3-less": {},
     "fontawesome4": {},
-    "ionicons": {}
+    "ionicons": {},
+    "jquery-ui": {}
   }
 }

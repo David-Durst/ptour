@@ -7,13 +7,14 @@
       "cfs-filesystem": {},
       "bootstrap3-less": {},
       "fontawesome4": {},
-      "ionicons": {}
+      "ionicons": {},
+      "jquery-ui": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.7.0",
-        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
       },
       "collectionFS": {
         "git": "https://github.com/CollectionFS/Meteor-CollectionFS.git",
@@ -40,10 +41,15 @@
         "tag": "v1.4.1",
         "commit": "c3c07eba87d42ef900c9c61323ce4499bdce3204"
       },
+      "jquery-ui": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
+        "tag": "v1.9.2",
+        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.2",
-        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       },
       "cfs-base-package": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-base-package.git",
@@ -52,8 +58,8 @@
       },
       "cfs-file": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-file.git",
-        "tag": "v0.0.32",
-        "commit": "ea0187e88b5896f387ba85ff9e3dabc7c0b0a8a1"
+        "tag": "v0.0.33",
+        "commit": "c74a4f71ca9356ee509f23094905f3a949f460b8"
       },
       "cfs-collection": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-collection.git",
@@ -98,7 +104,7 @@
       "data-man": {
         "git": "https://github.com/CollectionFS/Meteor-data-man.git",
         "branch": "master",
-        "commit": "2f53e4fee4246b9552046c1e05ba9ee5b169d900"
+        "commit": "eba0055619be2b5dfd7af6b4e946dc6fe393a040"
       },
       "cfs-upload-ddp": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-upload-ddp.git",
@@ -117,8 +123,8 @@
       },
       "cfs-tempstore": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-tempstore.git",
-        "tag": "v0.0.20",
-        "commit": "58640921f3b05148dc4ec0a7b8a691585bc4220a"
+        "tag": "v0.0.23",
+        "commit": "5d97f74373f2a08194b1a593f24dfe617e14350f"
       },
       "power-queue": {
         "git": "https://github.com/CollectionFS/Meteor-power-queue.git",
