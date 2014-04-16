@@ -92,18 +92,17 @@ Template.tour.setUpAutoComplete = function () {
     
     stops.forEach(function (stop) {
 	for (var i = 0; i < stop.tags.length; i++) {
-	    var suggestion = {
-		value: stop.id, 
-		label: stop.tags[i] + " (" + stop.name + ")"
-	    };
-	    suggestions.push(suggestion);
+	    suggestions.push(stop.tags[i] + ", " + stop.name);
 	}
     });
     
     $("#searchBox").autocomplete({
 	source: suggestions,
 	select: function( event, ui) {
-	    Session.set('locId', ui.item.value);
+	    var stopName = ui.item.value.split(', ')[1];
+	    var id = Template.tour.data.StopList.findOne(
+		{name:stopName}).id;
+	    Session.set('locId', id);
 	    Template.tour.engine.changeImage();
 	    Template.tour.engine.drawPoints();
 	    Template.tour.changeAudio();
