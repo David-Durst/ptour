@@ -13,14 +13,9 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a class="ptour-nav-link dropdown-toggle" data-toggle="dropdown" href="#">Explore <i class="ion-ios7-arrow-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a class="ptour-nav-link" href="#">Audio</a></li>
-            <li><a class="ptour-nav-link" href="#">Text</a></li>
-          </ul>
+        <li>
+          <a id="explore" class="ptour-nav-link dropdown-toggle" data-toggle="dropdown" href="#">Explore <i class="ion-ios7-arrow-down"></i></a>
         </li>
-
         <li class="dropdown">
           <a class="ptour-nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cogs"></i></a>
           <ul class="dropdown-menu">
@@ -38,7 +33,6 @@
       <button onclick=Template.tour.doSearch() type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
     </form>
 
-
     </div><!--/.nav-collapse -->
   </div>
 </div>
@@ -48,82 +42,111 @@
     <h1>Tour is in maintenance.</h1>
   </div>
 
-  <div class="graph container-full">
-    <div class="col-sm-12 col-md-12 col-lg-12">
-      <div class="well">
-        <div id="myCarousel" class="carousel slide">
-
-          <!-- Carousel items -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <div class="row">
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-              </div>
-              <!--/row-->
-            </div>
-
-            <!--/item-->
-            <div class="item">
-              <div class="row">
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-              </div>
-              <!--/row-->
-            </div>
-
-            <!--/item-->
-            <div class="item">
-              <div class="row">
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-              </div>
-              <!--/row-->
-            </div>
-
-            <!--/item-->
-            <div class="item">
-              <div class="row">
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-                <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/90x90" alt="Image" class="img-circle grayscale img-responsive"></a>
-                </div>
-              </div>
-              <!--/row-->
-            </div>
-            <!--/item-->
-          </div>
-
-          <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-        </div>
-        <!--/myCarousel-->
+  <div class="graph">
+    <div class="cell">
+      <ul class='inactive'>
+        <li  class="active" id="scene01" data-name="Scene_01" data-title="Frist">
+            <a href="#" onclick="return Template.tour.changeLocation(1)">
+              <img class="img-circle grayscale" alt="Frist" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene02" data-name="Scene_02" data-title="McCosh">
+            <a href="#" onclick="return Template.tour.changeLocation(2)">
+              <img class="img-circle grayscale" alt="McCosh" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene03" data-name="Scene_03" data-title="Chapel">
+            <a href="#" onclick="return Template.tour.changeLocation(3)">
+              <img class="img-circle grayscale" alt="Chapel" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene04" data-name="Scene_04" data-title="FitzRandolphGate">
+            <a href="#" onclick="return Template.tour.changeLocation(4)">
+              <img class="img-circle grayscale" alt="FitzRandolphGate" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene05" data-name="Scene_05" data-title="Blair">
+            <a href="#" onclick="return Template.tour.changeLocation(5)">
+              <img class="img-circle grayscale" alt="Blair" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene06" data-name="Scene_06" data-title="Dillon">
+            <a href="#" onclick="return Template.tour.changeLocation(6)">
+              <img class="img-circle grayscale" alt="Dillon" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene07" data-name="Scene_07" data-title="Holder">
+            <a href="#" onclick="return Template.tour.changeLocation(7)">
+              <img class="img-circle grayscale" alt="Holder" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene08" data-name="Scene_08" data-title="Alexander">
+            <a href="#" onclick="return Template.tour.changeLocation(8)">
+              <img class="img-circle grayscale" alt="Alexander" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene09" data-name="Scene_09" data-title="McCormick">
+            <a href="#" onclick="return Template.tour.changeLocation(9)">
+              <img class="img-circle grayscale" alt="McCormick" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene10" data-name="Scene_10" data-title="FitzRandolphGate">
+            <a href="#" onclick="return Template.tour.changeLocation(10)">
+              <img class="img-circle grayscale" alt="FitzRandolphGate" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene11" data-name="Scene_11" data-title="new01">
+            <a href="#" onclick="return Template.tour.changeLocation(11)">
+              <img class="img-circle grayscale" alt="new01" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene12" data-name="Scene_12" data-title="new02">
+            <a href="#" onclick="return Template.tour.changeLocation(12)">
+              <img class="img-circle grayscale" alt="new02" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene13" data-name="Scene_13" data-title="new03">
+            <a href="#" onclick="return Template.tour.changeLocation(13)">
+              <img class="img-circle grayscale" alt="new02" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene14" data-name="Scene_14" data-title="new04">
+            <a href="#" onclick="return Template.tour.changeLocation(14)">
+              <img class="img-circle grayscale" alt="new02" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene15" data-name="Scene_15" data-title="new05">
+            <a href="#" onclick="return Template.tour.changeLocation(15)">
+              <img class="img-circle grayscale" alt="new02" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene16" data-name="Scene_16" data-title="new06">
+            <a href="#" onclick="return Template.tour.changeLocation(16)">
+              <img class="img-circle grayscale" alt="new02" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene17" data-name="Scene_17" data-title="new07">
+            <a href="#" onclick="return Template.tour.changeLocation(17)">
+              <img class="img-circle grayscale" alt="new02" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene18" data-name="Scene_18" data-title="new08">
+            <a href="#" onclick="return Template.tour.changeLocation(18)">
+              <img class="img-circle grayscale" alt="new02" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene19" data-name="Scene_19" data-title="new09">
+            <a href="#" onclick="return Template.tour.changeLocation(19)">
+              <img class="img-circle grayscale" alt="new02" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+        <li id="scene20" data-name="Scene_20" data-title="new10">
+            <a href="#" onclick="return Template.tour.changeLocation(20)">
+              <img class="img-circle grayscale" alt="new02" height="100" src="http://placekitten.com/100/100" width="100">
+            </a>
+        </li>
+      </ul>
     </div>
-    <!--/well-->
-  </div>
 
   </div>
 
