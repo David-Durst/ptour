@@ -462,10 +462,7 @@ there as well. */
   clear:both;
 }
 
-.graph img {
-  height: auto;
-  max-width: 100%;
-}
+.hidden {display: none;}
 
 .graph
 {
@@ -475,11 +472,16 @@ there as well. */
   z-index: 1000;
   background-color: #fd680e;
   opacity: 0.9;
+  overflow: hidden;
 }
 .graph .cell
 {
   height:150px;
   padding:0em 0 0;
+}
+.graph img {
+  height: auto;
+  max-width: 100%;
 }
 .graph ul
 {

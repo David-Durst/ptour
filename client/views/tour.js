@@ -36,7 +36,7 @@ Template.tour.changeLocation = function (id) {
 }
 
 Template.tour.events({
-    'click #explore': function (e) {
+    'click .toggler': function (e) {
         $('.graph').toggle();
     }
 });
