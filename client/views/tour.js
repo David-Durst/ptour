@@ -28,6 +28,18 @@ Template.tour.changeLocationPrev = function () {
     Template.tour.engine.drawPoints();
     Template.tour.changeAudio();
 }
+Template.tour.changeLocation = function (id) {
+    Session.set('locId', id);
+    Template.tour.engine.changeImage();
+    Template.tour.engine.drawPoints();
+    Template.tour.changeAudio();
+}
+
+Template.tour.events({
+    'click #explore': function (e) {
+        $('.graph').toggle();
+    }
+});
 
 //Produce a popup asking for name and description, put it in the file on the
 //server.

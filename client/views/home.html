@@ -1,5 +1,5 @@
 <template name="home">
-<div class="wrap">
+<div id="bg-img" class="wrap">
 
     <!-- Fixed navbar -->
     <div class="navbar navbar-custom navbar-fixed-top">
@@ -31,24 +31,24 @@
           <h2 class="subtitle">The Orange Key Virtual Campus Tour of <br><a class="content" href="http://www.princeton.edu/main/" target="_blank">Princeton University</a></h2>
           <p>Sometimes its hard to visit another college campus, especially when you live far away. This tour is geared towards prospective students and those who are interested in learning more about <a class="content" href="http://www.princeton.edu/main/" target="_blank">Princeton University</a>.</p>
           <p>Ready when you are!</p>
-          <a class='btn-lg btn-default btn-custom' href="{{pathFor 'tour'}}">Tour</a>
+          <a class='btn-lg btn-default btn-theme' href="{{pathFor 'tour'}}">Tour</a>
         </div>
 
       </div> <!-- /.row -->
   </div> <!-- /.container -->
   </div> <!-- /.header -->
 
-  <div id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-lg-offset-3">
-          <p class="copyright">A project for <a class="footanchor" href="http://www.cs.princeton.edu/courses/archive/spring14/cos333/" target="_blank">COS333: Advanced Programming Techniques</a></p>
-      </div>
+
+</div> <!-- /.wrap -->
+<div id="footer">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <p class="copyright">A project for <a class="footanchor" href="http://www.cs.princeton.edu/courses/archive/spring14/cos333/" target="_blank">COS333: Advanced Programming Techniques</a></p>
     </div>
-  </div> <!-- /.container -->
-  </div> <!-- /.footer -->
+  </div>
+</div> <!-- /.container -->
+</div> <!-- /.footer -->
 
-
-</div>
 
 </template>
