@@ -1,0 +1,37 @@
+<template name="tour_header">
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="ptour-nav-link navbar-brand" href="{{pathFor 'home'}}">Ptour</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a id="explore" class="ptour-nav-link dropdown-toggle" data-toggle="dropdown" href="#">Explore <i class="ion-ios7-arrow-down"></i></a>
+        </li>
+        <li class="dropdown">
+          <a class="ptour-nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cogs"></i></a>
+          <ul class="dropdown-menu">
+            <li><a class="ptour-nav-link" href="#"><i class="fa fa-volume-off"></i></a></li>
+            <li><a class="ptour-nav-link" href="#"><i class="fa fa-volume-down"></i></a></li>
+            <li><a class="ptour-nav-link" href="#"><i class="fa fa-volume-up"></i></a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="navbar-form navbar-left navbar-input-group" role="search">
+      <div class="form-group">
+        <input id="searchBox" type="text" class="form-control typeahead" placeholder="Search" autocomplete="off" spellcheck="off"/>
+      </div>
+    </form>
+
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+</template>

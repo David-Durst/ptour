@@ -1,0 +1,26 @@
+<template name="tour_body">
+
+<div id="container">
+  <div class="maintenance">
+    <h1>Tour is in maintenance.</h1>
+  </div>
+
+  {{>tour_tableContents}}
+
+  {{>tour_overlaysLeft}}
+
+  <div class="overlays-right">
+    <button onclick=Template.tour.changeLocationPrev()>Prev</button>
+    <button onclick=Template.tour.changeLocationNext()>Next</button>
+    <button onclick=Template.tour.getRandomPoint()>Change Point</button>
+    <audio id="audio" controls>
+      <source id="mp3Source" type="audio/mpeg">
+    <embed height="50" width="300">
+    </audio>
+    {{#if isDebug}}
+    <button onclick=Template.tour.setLocation()>Set Location</button>
+    {{/if}}
+  </div>
+</div>
+
+</template>

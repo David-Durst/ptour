@@ -101,13 +101,13 @@ Template.tour.doSearch = function (query) {
 Template.tour.setUpAutoComplete = function () {
     var stops = Template.tour.data.StopList.find({});
     var suggestions = [];
-    
+
     stops.forEach(function (stop) {
 	for (var i = 0; i < stop.tags.length; i++) {
 	    suggestions.push(stop.tags[i] + ", " + stop.name);
 	}
     });
-    
+
     $("#searchBox").autocomplete({
 	source: suggestions,
 	select: function( event, ui) {
