@@ -1,14 +1,17 @@
 Template.tour.rendered = function() {
 
-    Template.tour.data = Template.tour.getData( function () {
-        Template.tour.engine = Template.tour.engineOverlays(THREE,
-            Template.tour.engine(THREE, Template.tour.idManipulation({})));
+    var initEngine = function () {
         Template.tour.engine.init();
         Template.tour.engine.animate();
         Template.tour.engine.drawPoints();
-	Template.tour.setUpAutoComplete();
-	document.getElementById("searchBox").focus();
-    });
+        Template.tour.setUpAutoComplete();
+        document.getElementById("searchBox").focus();
+    };
+    Template.tour.data = Template.tour.getData( function () {
+        Template.tour.engine = Template.tour.engineOverlays(THREE,
+            Template.tour.engine(THREE, Template.tour.idManipulation({})));
+        initEngine();
+    }, initEngine);
 
 };
 
