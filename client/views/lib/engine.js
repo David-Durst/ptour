@@ -131,6 +131,15 @@ Template.tour.engine = function (THREE, ret) {
 
         }
 
+        //ensure never get too close or too far out
+        //numbers chosen by guess and check.
+        if (ret.camera.fov < 15) {
+            ret.camera.fov = 15;
+        }
+        else if (ret.camera.fov > 100) {
+            ret.camera.fov = 100;
+        }
+
         ret.camera.updateProjectionMatrix();
 
     }
