@@ -1,0 +1,29 @@
+@import "tour_header.import.less"; /* Top nav bar styles */
+@import "tour_tableContents.import.less"; /* Panorama canvas */
+@import "tour_overlays_and_map.import.less"; /* Overlays */
+
+/********* Base tour styles *********/
+canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* Maintenance */
+.maintenance {
+  position: absolute;
+  color: #ffffff;
+  z-index: 100;
+  display: block;
+  top:135px;
+  left:25px;
+}
+.maintenance h1{
+  color: #ffffff;
+}

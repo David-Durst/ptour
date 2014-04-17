@@ -1,0 +1,100 @@
+
+.overlays-right { // will get rid of right overlay
+  position: absolute;
+  z-index: 100;
+  display: block;
+  bottom:1%;
+  right:1%;
+  width: 15%;
+  height: 20%;
+  background-color:rgba(70,70,70,0.5);
+}
+
+.overlays-left {
+  width: 275px;
+  height: 490px;
+  position: absolute;
+  display: block;
+  z-index: 100;
+  bottom:1%;
+  left:1%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
+  -moz-transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
+  -o-transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
+  transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
+  background-color: rgba(54,54,54,0.4);
+}
+
+.info {
+  height: 50%;
+  width: 100%;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  text-align: center;
+}
+.info h2, p {
+  color: #ffffff;
+  font-weight: 300;
+}
+.info h2 {
+  font-size: 30px;
+}
+.info p {
+  font-size: 15px;
+}
+
+#map_canvas {
+  position: absolute;
+  bottom: 0.92em;
+  left: 0.88em;
+  background-color:rgba(220,220,220,1.0); // when we actually get map, change background to below
+  // background-color: rgba(54,54,54,0.4);
+  // 490px by 275px parent div dimension
+  height: 168px;
+  width: 250px;
+  margin: auto;
+}
+
+
+@media (max-width: 780px) {
+  .overlays-left {
+    display: block;
+    background-color: rgba(54,54,54,1.0);
+    -webkit-transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
+    -moz-transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
+    -o-transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
+    transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
+    width:100%;
+    height:300px;
+    position:absolute;
+    top:88%;
+    right:auto;
+    left:auto;
+    text-align: left;
+  }
+  .info {
+    position: absolute;
+    left: 20em;
+    height: 100%;
+    width: 60%;
+    text-align: left;
+  }
+  #map_canvas {
+    position: absolute;
+    bottom: 7.66em;
+    left: 0.88em;
+    background-color:rgba(220,220,220,1.0); // when we actually get map, change background to below
+    // background-color: rgba(54,54,54,0.4);
+    // 490px by 275px parent div dimension
+    height: 168px;
+    width: 250px;
+    margin: auto;
+  }
+}
+/* With this transition, the element is still here, just opaque.
+This wouldn't be a problem, unless we put the next/prev controls
+there as well. */
