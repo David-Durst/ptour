@@ -1,10 +1,19 @@
-Template.tour.rendered = function() {
+Template.tour.updateLeftOverlay = function () {
+    Template.tour_overlaysLeft.stop.title.set(Template.tour.data.StopList
+        .findOne({id:Template.tour.engine.curId()}).name);
+    Template.tour_overlaysLeft.stop.description.set(Template.tour.data
+        .StopList.findOne({id:Template.tour.engine.curId()}).description);
+    Template.tour_overlaysLeft.point.title.set('');
+    Template.tour_overlaysLeft.point.description.set('');
+}
 
+Template.tour.rendered = function() {
     var initEngine = function () {
         Template.tour.engine.init();
         Template.tour.engine.animate();
         Template.tour.engine.drawPoints();
         Template.tour.setUpAutoComplete();
+        Template.tour.updateLeftOverlay();
         document.getElementById("searchBox").focus();
     };
     Template.tour.data = Template.tour.getData( function () {
@@ -24,18 +33,21 @@ Template.tour.changeLocationNext = function () {
     Template.tour.engine.changeImage();
     Template.tour.engine.drawPoints();
     Template.tour.changeAudio();
+    Template.tour.updateLeftOverlay();
 }
 Template.tour.changeLocationPrev = function () {
     Template.tour.engine.setPrev();
     Template.tour.engine.changeImage();
     Template.tour.engine.drawPoints();
     Template.tour.changeAudio();
+    Template.tour.updateLeftOverlay();
 }
 Template.tour.changeLocation = function (id) {
     Session.set('locId', id);
     Template.tour.engine.changeImage();
     Template.tour.engine.drawPoints();
     Template.tour.changeAudio();
+    Template.tour.updateLeftOverlay();
 }
 
 Template.tour.events({

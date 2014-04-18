@@ -1,11 +1,13 @@
 <template name="tour_overlaysLeft">
   <div class="overlays-left">
     <div class="info">
-      <h2>[Scene: Title]</h2>
-      <p>[Scene: Description] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, sequi harum aut quasi id aliquid corporis! Quisquam, neque sequi distinctio sunt aut et veniam voluptate assumenda dolore quas modi tenetur.</p>
+        <h2>{{stop.title.get}}</h2>
+        <p>{{stop.description.get}}</p>
+        <h2>{{point.title.get}}</h2>
+        <p>{{point.description.get}}</p>
     </div>
 
-    <div id="map_canvas"></div>
+    <div id="map_canvas"><img src="http://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=12&size=250x168&sensor=false&key=AIzaSyBpP2LXfAGeyD_hAQ6Nmce6axbt_QyE8VI" /></div>
 
   </div>
 </template>

@@ -22,12 +22,18 @@ Template.tour.engineOverlays = function (THREE, ret) {
     }
 
     ret.pointClicked = function (intersects) {
-        var s = ""
+        var i = 0;
+        var point = {};
         $.each(intersects, function (i,p) {
-            if (p.object.clickable) {
-                s += p.object.point.pName + " ";
-            }});
+            if (i === 0 && p.object.clickable) {
+                point.title = p.object.point.pName;
+                point.description = p.object.point.pDescription;
+            }
+            i = 1;
+        });
         //alert(s);
+        Template.tour_overlaysLeft.point.title.set(point.title);
+        Template.tour_overlaysLeft.point.description.set(point.description);
     }
 
     return ret;
