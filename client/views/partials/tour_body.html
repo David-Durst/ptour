@@ -17,6 +17,12 @@
       <source id="mp3Source" type="audio/mpeg">
     <embed height="50" width="300">
     </audio>
+    <audio id="prevAudio" display="none">
+      <source id="prevMp3Source" type="audio/mpeg">
+    </audio>
+    <audio id="nextAudio" display="none">
+      <source id="nextMp3Source" type="audio/mpeg">
+    </audio>
     {{#if isDebug}}
     <button onclick=Template.tour.setLocation()>Set Location</button>
     {{/if}}

@@ -44,6 +44,7 @@ Template.tour.idManipulation = function (ret) {
 
     ret.getPrevNext = function () {
         $.Deferred(function (dfd) {
+	    // cache prev and next images
             var prev = new THREE.MeshBasicMaterial( {
                 map: THREE.ImageUtils.loadTexture( ret.getPrevImgUrl() )
             });
@@ -52,6 +53,20 @@ Template.tour.idManipulation = function (ret) {
             });
             prev.dispose();
             next.dispose();
+
+	    // cache prev and next mp3 files 
+	    var prevAudio = document.getElementById('prevAudio');
+	    var prevSource = document.getElementById('prevMp3Source');
+	    prevSource.src=  Template.tour.data.StopList.findOne(
+		{id:ret.prevId()}).mp3Url;
+	    prevAudio.load();
+	    $( "#prevMp3Source" ).removeAttr('src');
+	    var nextAudio = document.getElementById('nextAudio');
+	    var nextSource = document.getElementById('nextMp3Source');
+	    nextSource.src=  Template.tour.data.StopList.findOne(
+		{id:ret.nextId()}).mp3Url;
+	    nextAudio.load();
+	    $( "#nextMp3Source" ).removeAttr('src');
         });
     }
     return ret;
