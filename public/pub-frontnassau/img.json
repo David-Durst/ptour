@@ -1,0 +1,10 @@
+{
+      "id":4,
+      "next":100,
+      "prev":3,
+      "name":"Front Campus",
+      "description": "
+            Front Campus is the grassy, shaded area in front of Nassau Hall. The Pre-Rade and P-Rade take place here.",
+      "tags": ["pre-rade","p-rade","FitzRandolph","gate","parade"],
+      "points": [] 
+}
