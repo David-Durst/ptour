@@ -5,5 +5,6 @@
       "name":"Dillon Gymnasium",
       "description": "Dillon Gymnasium is the non-varsity gym facility on campus.",
       "tags": ["exercise","gym","fitness","intramural","sports"],
-      "points": [] 
+      "points": [],
+      "lat":40.346289,  "long":-74.659077 
 }

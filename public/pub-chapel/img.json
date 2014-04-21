@@ -5,5 +5,6 @@
       "name":"University Chapel",
       "description": "The University Chapel is the third largest college chapel in the world.",
       "tags": ["religious","religion","service","choir","worship","weddings"],
-      "points": [] 
+      "points": [],
+      "lat": 40.348664, "long": -74.657430 
 }

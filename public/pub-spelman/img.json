@@ -5,5 +5,6 @@
       "prev":14,
       "description": "Spelman Hall contains dormitories with kitchens.",
       "tags": ["kitchen","independent","spelman"],
-      "points": [] 
+      "points": [],
+      "lat": 40.344073, "long": -74.659096       
 }

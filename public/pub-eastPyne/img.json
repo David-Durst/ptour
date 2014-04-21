@@ -5,5 +5,6 @@
       "name":"East Pyne",
       "description": "East Pyne is home to Princeton scholars engaged in studies of classics, comparative literature and languages.",
       "tags": ["humanities","classics","literature","languages","german","spanish","french","italian"],
-      "points": [] 
+      "points": [],
+      "lat": 40.348688, "long": -74.658431
 }

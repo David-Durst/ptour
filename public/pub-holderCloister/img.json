@@ -5,5 +5,6 @@
       "name":"Holder Cloister",
       "description": "Holder Cloister is part of Rockefeller College, one of Princeton's six residential colleges.",
       "tags": ["Rockefeller","Rocky","college","residential","living","housing","freshman"],
-      "points": [] 
+      "points": [],
+      "lat": 40.348489,  "long":-74.661964 
 }

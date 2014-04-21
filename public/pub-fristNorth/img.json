@@ -5,5 +5,6 @@
       "name":"Frist Campus Center",
       "description": "Frist Campus Center is a hub of student and community life, hosting a variety of social and student government programs.",
       "tags": ["center","food","government","student","mail"],
-      "points": [{"pX":11.730182946827835,"pY":66.22587791876178,"pZ":-134.07660460320142,"pLat":26.200000000000006,"pLon":-85,"pName":"Lamppost","pDescription":"The lamp post threatens the existance of humanity. RUN FOR YOUR LIFE!"},{"pX":-19.092379809502102,"pY":33.23227464292012,"pZ":145.02102245973597,"pLat":12.800000000000004,"pLon":97.50000000000001,"pName":"Concrete Wall","pDescription":"Phew, a nice safe concrete wall. Humanity is saved."}] 
+      "points": [{"pX":11.730182946827835,"pY":66.22587791876178,"pZ":-134.07660460320142,"pLat":26.200000000000006,"pLon":-85,"pName":"Lamppost","pDescription":"The lamp post threatens the existance of humanity. RUN FOR YOUR LIFE!"},{"pX":-19.092379809502102,"pY":33.23227464292012,"pZ":145.02102245973597,"pLat":12.800000000000004,"pLon":97.50000000000001,"pName":"Concrete Wall","pDescription":"Phew, a nice safe concrete wall. Humanity is saved."}],
+      "lat": 40.347099, "long": -74.655416    
 }

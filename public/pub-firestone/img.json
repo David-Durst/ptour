@@ -2,10 +2,11 @@
       "id":99,
       "next":3,
       "prev":2,
-      "name":"Firestone Plaza",
+      "name":"Firestone Library",
       "description": "Firestone Library is the hub of the Princeton University Library system, one of the largest open-stack collections in the United States.",
       "tags": ["library","firestone"],
-      "points": [] 
+      "points": [],
+      "lat": 40.349040, "long":  -74.657279 
 }
 
 

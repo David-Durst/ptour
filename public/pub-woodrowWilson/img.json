@@ -5,7 +5,8 @@
       "name":"Woodrow Wilson School",
       "description": "The School of Public and International Affairs, also known as “Woody Woo”, is designed to prepare students for careers in public service.",
       "tags": ["international","woody","woodrow","wilson"],
-      "points": [] 
+      "points": [],
+      "lat": 40.348178, "long": -74.654542    
 }
 
 
