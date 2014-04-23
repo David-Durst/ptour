@@ -11,6 +11,9 @@ Template.tour_tableContents.events({
     console.log("id: " + e.currentTarget.id);
     console.log(currPosx);
 
+    $('li.active').removeClass("active");
+    $("#" + e.currentTarget.id).addClass("active").animate("fade",50);
+
     if (diff < 0) { // move right
         $(".graph-item").animate({
           left: "+=" + offset + "px",

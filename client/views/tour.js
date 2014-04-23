@@ -56,9 +56,9 @@ Template.tour.events({
     'click .toggler': function (e) {
         $('.graph').toggle("fade", function() {
             if ($(this).is(':visible')) {
-                 $('.toggler').text('Hide');
+                 $('.toggler').text('Hide Menu');
             } else {
-                 $('.toggler').text('Show');
+                 $('.toggler').text('Show Menu');
             }
         });
     }

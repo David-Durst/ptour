@@ -56,10 +56,11 @@
   -o-transition:all 0.3s ease-in-out;
   transition:all 0.3s ease-in-out;
   cursor:pointer;
-  opacity:0.75;
+  opacity:0.80;
   position:absolute;
   top:0;
   width:100px;
+  margin-top: 0.1em;
 }
 .graph li:hover
 {
@@ -105,9 +106,22 @@
 {
   border:0;
 }
+
+.graph li.active  {
+  opacity: 1.0;
+}
 .graph .active img {
   width: 120px;
   height: auto;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  -o-border-radius: 500px;
+  border-radius: 500px;
+  -webkit-box-shadow: 0px 0px 0px 5px @orange-color;
+  -moz-box-shadow: 0px 0px 0px 5px @orange-color;
+  -o-box-shadow: 0px 0px 0px 5px @orange-color;
+  -webkit-transform: scale(1.15);
+  opacity: 1.0;
 }
 
 #scene01 {
