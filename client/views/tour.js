@@ -51,7 +51,13 @@ Template.tour.changeLocation = function (id) {
 
 Template.tour.events({
     'click .toggler': function (e) {
-        $('.graph').toggle();
+        $('.graph').toggle("fade", function() {
+            if ($(this).is(':visible')) {
+                 $('.toggler').text('Hide');
+            } else {
+                 $('.toggler').text('Show');
+            }
+        });
     }
 });
 

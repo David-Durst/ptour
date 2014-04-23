@@ -83,6 +83,7 @@
     text-align: left;
   }
   .info {
+    margin-top: 0.2em;
     position: absolute;
     left: 20em;
     height: 100%;
@@ -174,6 +175,35 @@ ul.ui-autocomplete .ui-menu-item:hover
 }
 
 @media (max-width: 780px) {
+  .prev-next-nav {
+    position: absolute;
+    top: 1.0em;
+    left: 0%;
+    margin-top: 1.3em;
+  }
+  #btn-prev-scene, #btn-rand-scene, #btn-next-scene {
+    -webkit-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
+    -moz-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
+    -o-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
+    transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
+  }
+  #btn-prev-scene {
+    left: 0.0em;
+    position: absolute;
+  }
+  #btn-rand-point {
+    position: absolute;
+    float: right;
+    margin-left: 7.5em;
+  }
+  #btn-next-scene {
+    float: left;
+    left: 16em;
+    position: absolute;
+  }
+  #map_canvas {
+    bottom: 5.2em;
+  }
   #audio {
     -webkit-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
     -moz-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
