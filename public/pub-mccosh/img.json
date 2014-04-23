@@ -3,8 +3,8 @@
       "next":6,
       "prev":4,
       "name":"McCosh Courtyard",
-      "description": "McCosh Hall, which houses the English department, contains large lecture halls and small seminar rooms.",
-      "tags": ["lecture","english"],
+      "description": "McCosh Courtyard is the crossroads between large academic departments.",
+      "tags": ["lecture","english","history"],
       "points": [],
       "lat": 40.348504, "long": -74.656862
 }

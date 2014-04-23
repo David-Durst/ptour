@@ -3,8 +3,8 @@
       "next":12,
       "prev":9,
       "name":"Prospect House",
-      "description": "Prospect House serves as a private dining club and social facility for Princeton's faculty and staff.",
-      "tags": ["faculty","staff","prospect"],
+      "description": "Prospect House serves as a faculty and staff dining facility.",
+      "tags": ["faculty","staff","prospect","president","garden"],
       "points": [],
       "lat": 40.346811,  "long": -74.656578 
 }

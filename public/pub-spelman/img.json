@@ -1,9 +1,9 @@
 {
       "id":15,
-      "name":"Spelman Halls",
+      "name":"Spelman Hall",
       "next":1,
       "prev":13,
-      "description": "Spelman Hall contains dormitories with kitchens.",
+      "description": "Spelman Hall is a popular dormitory for students interested in cooking for themselves.",
       "tags": ["kitchen","independent","spelman"],
       "points": [],
       "lat": 40.344073, "long": -74.659096       
