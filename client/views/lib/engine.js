@@ -151,8 +151,25 @@ Template.tour.engine = function (THREE, ret) {
 
     }
 
-    function update() {
+    //REMOVE THIS ONCE CURSOR AT CENTER NO LONGER NEEDED
+    var reticuleMat = new THREE.MeshBasicMaterial( {
+        map: THREE.ImageUtils.loadTexture('landing/icons/point_24x24.png'),
+        transparent:true,
+        opacity: 0.9,
+        color: 0x000000
+    });
+    var reticule = new THREE.Mesh(new THREE.CircleGeometry(4,32), reticuleMat);
+    reticule.position.x = 0;
+    reticule.position.y = 0; 
+    reticule.position.z = 0; 
+    reticule.clickable = false;
+    var foxtrot = 0;
 
+    function update() {
+        if (foxtrot === 0) {
+            ret.scene.add(reticule);
+            foxtrot === 1;
+        }
         if ( ret.isUserInteracting === false ) {
 
             //set to 0.1 ofr default rotation, but this bugs me.
@@ -173,6 +190,12 @@ Template.tour.engine = function (THREE, ret) {
         ret.camera.target.closeZ = ret.camera.target.z * ret.rhoRatio
 
         ret.camera.lookAt( ret.camera.target );
+        
+        //REMOVE THIS WHEN DONE
+        reticule.position.x = ret.camera.target.closeX;
+        reticule.position.y = ret.camera.target.closeY; 
+        reticule.position.z = ret.camera.target.closeZ; 
+        reticule.lookAt(ret.camera.position);
         
 
         /*
