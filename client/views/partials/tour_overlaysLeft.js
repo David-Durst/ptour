@@ -1,4 +1,5 @@
-Template.tour_overlaysLeft.genDep = function () { 
+Template.tour_overlaysLeft.genDep = function (def) { 
+    def = typeof def !== 'undefined' ? def : '';
     return {
         value: '',
         dep: new Deps.Dependency,
@@ -22,3 +23,10 @@ Template.tour_overlaysLeft.point = {
     title : Template.tour_overlaysLeft.genDep(),
     description : Template.tour_overlaysLeft.genDep()
 };
+
+Template.tour_overlaysLeft.url = {
+    lat : Template.tour_overlaysLeft.genDep(),
+    lon : Template.tour_overlaysLeft.genDep(),
+    id : Template.tour_overlaysLeft.genDep()
+};
+
