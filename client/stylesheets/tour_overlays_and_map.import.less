@@ -26,7 +26,7 @@
   -moz-transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
   -o-transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
   transition: all .5s cubic-bezier(0.4,0.0,0.2,1);
-  background-color: rgba(54,54,54,0.4);
+  background-color: rgba(54,54,54,0.45);
 }
 
 .info {
@@ -36,15 +36,22 @@
   padding-right: 0.2em;
   text-align: center;
 }
-.info h2, p {
+.info h2, h3, p {
   color: #ffffff;
-  font-weight: 300;
 }
 .info h2 {
   font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.info h3 {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 12px;
 }
 .info p {
   font-size: 15px;
+  font-weight: 300;
 }
 
 #map_canvas {
@@ -53,7 +60,6 @@
   left: 0.88em;
   background-color:rgba(220,220,220,1.0); // when we actually get map, change background to below
   // background-color: rgba(54,54,54,0.4);
-  // 490px by 275px parent div dimension
   height: 168px;
   width: 250px;
   margin: auto;
@@ -115,4 +121,64 @@ ul.ui-autocomplete .ui-menu-item {
 ul.ui-autocomplete .ui-menu-item:hover
 {
     background-color:black;
+}
+
+.prev-next-nav {
+  margin-top: 1.3em;
+}
+
+.prev-next-nav button {
+    display: inline-block;
+    text-transform: uppercase;
+    overflow:visible; /* Shrinkwrap the text in IE7- */
+    margin:0;
+    padding:0;
+    border:0;
+    color:#ffffff; /* Match your link colour */
+    background:transparent;
+    font:inherit; /* Inherit font settings (doesn’t work in IE7-) */
+    line-height:normal; /* Override line-height to avoid spacing issues */
+    text-decoration:underline; /* Make it look linky */
+    cursor:pointer; /* Buttons don’t make the cursor change in all browsers */
+    -moz-user-select:text; /* Make button text selectable in Gecko */
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+/* Make sure keyboard users get visual feedback */
+.prev-next-nav button:hover,
+.prev-next-nav button:focus {
+    color:#fd680e;
+}
+/* Remove mystery padding in Gecko browsers.
+ * See https://bugzilla.mozilla.org/show_bug.cgi?id=140562
+ */
+.prev-next-nav button::-moz-focus-inner {
+    padding:0;
+    border:0;
+}
+#btn-prev-scene {
+  float: left;
+  margin-left: 1em;
+}
+#btn-next-scene {
+  float: right;
+  margin-right: 1em;
+}
+
+/*********** Audio styles ************/
+#audio {
+  position:fixed;
+  bottom:1%;
+  right:1%;
+  z-index:1000;
+}
+
+@media (max-width: 780px) {
+  #audio {
+    -webkit-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
+    -moz-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
+    -o-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
+    transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
+    visibility: hidden;
+  }
 }
