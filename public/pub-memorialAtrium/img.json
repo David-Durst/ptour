@@ -1,7 +1,7 @@
 {
       "id":100,
-      "next":5,
-      "prev":4,
+      "next":4,
+      "prev":3,
       "name":"Nassau Hall",
       "description": "The Memorial Atrium of Nassau Hall lists the names and class years of Princetonians who died in the wars of the United States, from the Revolutionary War through Vietnam.",
       "tags": ["war","president","congress"],

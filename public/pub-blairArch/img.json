@@ -1,7 +1,7 @@
 {
       "id":3,
-      "next":4,
-      "prev":2,
+      "next":100,
+      "prev":99,
       "name":"Blair Arch",
       "description": "Blair Arch is a popular space for a cappella concerts.",
       "tags": ["store","a cappella","gothic"],
