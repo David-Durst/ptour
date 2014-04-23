@@ -9,24 +9,6 @@
 
   {{>tour_overlaysLeft}}
 
-  <div class="overlays-right">
-    <button onclick=Template.tour.changeLocationPrev()>Prev</button>
-    <button onclick=Template.tour.changeLocationNext()>Next</button>
-    <button onclick=Template.tour.getRandomPoint()>Change Point</button>
-    <audio id="audio" controls>
-      <source id="mp3Source" type="audio/mpeg">
-    <embed height="50" width="300">
-    </audio>
-    <audio id="prevAudio" display="none">
-      <source id="prevMp3Source" type="audio/mpeg">
-    </audio>
-    <audio id="nextAudio" display="none">
-      <source id="nextMp3Source" type="audio/mpeg">
-    </audio>
-    {{#if isDebug}}
-    <button onclick=Template.tour.setLocation()>Set Location</button>
-    {{/if}}
-  </div>
 </div>
 
 </template>

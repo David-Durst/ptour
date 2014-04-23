@@ -7,7 +7,28 @@
         <p>{{point.description.get}}</p>
     </div>
 
-    <div id="map_canvas"><img src="http://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=12&size=250x168&sensor=false&key=AIzaSyBpP2LXfAGeyD_hAQ6Nmce6axbt_QyE8VI" /></div>
+    <div class="prev-next-nav">
+      <button id="btn-prev-scene" onclick=Template.tour.changeLocationPrev()>Prev</button>
+      <button id="btn-rand-point" onclick=Template.tour.getRandomPoint()>Interest</button>
+      <button id="btn-next-scene" onclick=Template.tour.changeLocationNext()>Next</button>
+      {{#if isDebug}}
+        <button onclick=Template.tour.setLocation()>Set Location</button>
+      {{/if}}
+    </div>
 
+    <div id="map_canvas"><img src="http://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=12&size=250x168&sensor=false&key=AIzaSyBpP2LXfAGeyD_hAQ6Nmce6axbt_QyE8VI" />
+    </div>
   </div>
+
+  <audio id="audio" controls>
+    <source id="mp3Source" type="audio/mpeg">
+    <embed height="50" width="300">
+  </audio>
+  <audio id="prevAudio" display="none">
+    <source id="prevMp3Source" type="audio/mpeg">
+  </audio>
+  <audio id="nextAudio" display="none">
+    <source id="nextMp3Source" type="audio/mpeg">
+  </audio>
+
 </template>

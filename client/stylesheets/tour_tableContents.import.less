@@ -1,3 +1,7 @@
+@graph-item-pos-left: 1em;
+@graph-item-pos-offset: 11em;
+@orange-color:#fd680e;
+
 .cell {
   zoom:1;
   margin:0em auto;
@@ -21,8 +25,7 @@
   background:url('../public/tour/bg-tour-graph.png') 0 65px repeat-x;
   border:0;
   z-index: 1000;
-  background-color: #fd680e;
-  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.4);
   overflow: hidden;
 }
 .graph .cell
@@ -102,66 +105,59 @@
 {
   border:0;
 }
+.graph .active img {
+  width: 120px;
+  height: auto;
+}
 
 #scene01 {
-  left: -9em;
+  left: @graph-item-pos-left;
 }
 #scene02 {
-  left: 1em;
+  left: @graph-item-pos-left + (1 * @graph-item-pos-offset);
 }
 #scene03 {
-  left: 12em;
+  left: @graph-item-pos-left + (2 * @graph-item-pos-offset);
 }
 #scene04 {
-  left: 23em;
+  left: @graph-item-pos-left + (3 * @graph-item-pos-offset);
 }
 #scene05 {
-  left: 34em;
+  left: @graph-item-pos-left + (4 * @graph-item-pos-offset);
 }
 #scene06 {
-  left: 45em;
+  left: @graph-item-pos-left + (5 * @graph-item-pos-offset);
 }
 #scene07 {
-  left: 56em;
+  left: @graph-item-pos-left + (6 * @graph-item-pos-offset);
 }
 #scene08 {
-  left: 67em;
+  left: @graph-item-pos-left + (7 * @graph-item-pos-offset);
 }
 #scene09 {
-  left: 78em;
+  left: @graph-item-pos-left + (8 * @graph-item-pos-offset);
 }
 #scene10 {
-  left: 89em;
+  left: @graph-item-pos-left + (9 * @graph-item-pos-offset);
 }
 #scene11 {
-  left: 100em;
+  left: @graph-item-pos-left + (10 * @graph-item-pos-offset);
 }
 #scene12 {
-  left: 111em;
+  left: @graph-item-pos-left + (11 * @graph-item-pos-offset);
 }
 #scene13 {
-  left: 122em;
+  left: @graph-item-pos-left + (12 * @graph-item-pos-offset);
 }
 #scene14 {
-  left: 133em;
+  left: @graph-item-pos-left + (13 * @graph-item-pos-offset);
 }
 #scene15 {
-  left: 144em;
+  left: @graph-item-pos-left + (14 * @graph-item-pos-offset);
 }
 #scene16 {
-  left: 155em;
+  left: @graph-item-pos-left + (15 * @graph-item-pos-offset);
 }
-#scene17 {
-  left: 166em;
-}
-#scene18 {
-  left: 177em;
-}
-#scene19 {
-  left: 188em;
-}
-#scene20 {
-  left: 199em;
-}
+
 
 
