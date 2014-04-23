@@ -16,7 +16,7 @@
       {{/if}}
     </div>
 
-    <div id="map_canvas"><img src="http://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=12&size=250x168&sensor=false&key=AIzaSyBpP2LXfAGeyD_hAQ6Nmce6axbt_QyE8VI" />
+    <div id="map_canvas"><img src="http://maps.googleapis.com/maps/api/staticmap?center={{url.lat.get}},{{url.lon.get}}&markers=color:blue%7clabel:{{url.id.get}}%7c{{url.lat.get}},{{url.lon.get}}&zoom=15&size=250x168&sensor=false&key=AIzaSyBpP2LXfAGeyD_hAQ6Nmce6axbt_QyE8VI" />
     </div>
   </div>
 

@@ -1,10 +1,13 @@
 Template.tour.updateLeftOverlay = function () {
-    Template.tour_overlaysLeft.stop.title.set(Template.tour.data.StopList
-        .findOne({id:Template.tour.engine.curId()}).name);
-    Template.tour_overlaysLeft.stop.description.set(Template.tour.data
-        .StopList.findOne({id:Template.tour.engine.curId()}).description);
+    var curStop = Template.tour.data.StopList
+        .findOne({id:Template.tour.engine.curId()});
+    Template.tour_overlaysLeft.stop.title.set(curStop.name);
+    Template.tour_overlaysLeft.stop.description.set(curStop.description);
     Template.tour_overlaysLeft.point.title.set('');
     Template.tour_overlaysLeft.point.description.set('');
+    Template.tour_overlaysLeft.url.lat.set(curStop.lat);
+    Template.tour_overlaysLeft.url.lon.set(curStop.long);
+    Template.tour_overlaysLeft.url.id.set(Template.tour.engine.curId());
 }
 
 Template.tour.rendered = function() {
@@ -27,27 +30,27 @@ Meteor.startup(function () {
     Session.set('locId', 1);
 });
 
-Template.tour.changeLocationNext = function () {
-	Template.tour.engine.setNext();
+//call this after changing locId to move the engine to that location
+Template.tour.reloadLocation = function () {
     Template.tour.engine.changeImage();
     Template.tour.engine.drawPoints();
     Template.tour.changeAudio();
     Template.tour.updateLeftOverlay();
+}
+
+Template.tour.changeLocationNext = function () {
+	Template.tour.engine.setNext();
+    Template.tour.reloadLocation();
 }
 Template.tour.changeLocationPrev = function () {
     Template.tour.engine.setPrev();
-    Template.tour.engine.changeImage();
-    Template.tour.engine.drawPoints();
-    Template.tour.changeAudio();
-    Template.tour.updateLeftOverlay();
+    Template.tour.reloadLocation();
 }
 Template.tour.changeLocation = function (id) {
     Session.set('locId', id);
-    Template.tour.engine.changeImage();
-    Template.tour.engine.drawPoints();
-    Template.tour.changeAudio();
-    Template.tour.updateLeftOverlay();
+    Template.tour.reloadLocation();
 }
+
 
 Template.tour.events({
     'click .toggler': function (e) {
