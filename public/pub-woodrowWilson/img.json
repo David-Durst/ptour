@@ -5,7 +5,7 @@
       "name":"Woodrow Wilson School",
       "description": "The School of Public and International Affairs, also known as \"Woody Woo\", is designed to prepare students for careers in public service.",
       "tags": ["international","woody","woodrow","wilson"],
-      "points": [],
+      "points": [{"pX":-22.058862291598384,"pY":102.29975400937478,"pZ":-107.46239772135046,"pLat":43.00000000000001,"pLon":-101.60000000000002,"pName":"Robertson Hall","pDescription":"Robertson Hall houses the Woodrow Wilson School of Public and International Affairs."},{"pX":137.87243218125127,"pY":52.53110718892011,"pZ":-27.049495779634256,"pLat":20.5,"pName":"Fisher Hall","pDescription":"Fisher Hall is home of the Economics department."}],
       "lat": 40.348178, "long": -74.654542    
 }
 

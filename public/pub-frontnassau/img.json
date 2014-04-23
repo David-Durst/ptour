@@ -5,6 +5,6 @@
       "name":"Front Campus",
       "description": "Front Campus is the grassy area in front of Nassau Hall. The Pre-Rade and P-Rade take place here.",
       "tags": ["pre-rade","p-rade","FitzRandolph","gate","parade"],
-      "points": [], 
+      "points": [{"pX":143.4437470761084,"pY":43.85575570841051,"pZ":-0.7510765671055399,"pLat":17,"pLon":-0.29999999999999716,"pName":"FitzRandolph Gates","pDescription":"There is a commonly-held superstition that students who walk out of the FitzRandolph Gate before graduation will never graduate"},{"pX":-127.38362628000903,"pY":78.82074766084018,"pZ":7.791116347555427,"pLat":31.700000000000003,"pLon":176.5,"pName":"Nassau Hall","pDescription":"In 1783, Nassau Hall served as the nations capitol for four months and eight days."}], 
       "lat": 40.349183, "long": -74.659531      
 }

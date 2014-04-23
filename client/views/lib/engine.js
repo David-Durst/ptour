@@ -221,10 +221,13 @@ Template.tour.engine = function (THREE, ret) {
         mesh = new THREE.Mesh( geometry, material );
         mesh.clickable = false;
 
+
         ret.scene.add( mesh );
         ret.getPrevNext();
 	ret.lat = 0.0
 	ret.lon = 0.0
+	//REMOVE THIS WHEN DONE
+        ret.scene.add(reticule);
     }
 
     return ret;
