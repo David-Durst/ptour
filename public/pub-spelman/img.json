@@ -2,7 +2,7 @@
       "id":15,
       "name":"Spelman Halls",
       "next":1,
-      "prev":14,
+      "prev":13,
       "description": "Spelman Hall contains dormitories with kitchens.",
       "tags": ["kitchen","independent","spelman"],
       "points": [],
