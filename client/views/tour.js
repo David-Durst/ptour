@@ -108,4 +108,5 @@ Template.tour.changeAudio = function () {
     source.src=  Template.tour.data.StopList.findOne(
 	{id:Session.get('locId')}).mp3Url;
     audio.load();
+    audio.play();
 }
