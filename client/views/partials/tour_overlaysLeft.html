@@ -11,7 +11,9 @@
       <button id="btn-prev-scene" onclick=Template.tour.changeLocationPrev()>Prev</button>
       <button id="btn-rand-point" onclick=Template.tour.getRandomPoint()>Interest</button>
       <button id="btn-next-scene" onclick=Template.tour.changeLocationNext()>Next</button>
-      <button onclick=Template.tour.setLocation()>Set Location</button>
+      {{#if isDebug}}
+        <button onclick=Template.tour.setLocation()>Set Location</button>
+      {{/if}}
 
     </div>
 

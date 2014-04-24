@@ -98,10 +98,6 @@ Template.tour.setFocus = function (arr, index) {
     Template.tour.engine.lon = arr[index].pLon;
 }
 
-Template.tour.isDebug = function () {
-    return Meteor.absoluteUrl().indexOf('localhost') != -1;
-}
-
 Template.tour.changeAudio = function () {
     var audio = document.getElementById('audio');
     var source = document.getElementById('mp3Source');
