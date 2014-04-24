@@ -5,6 +5,7 @@
       "prev":13,
       "description": "Spelman Hall is a popular dormitory for students interested in cooking for themselves.",
       "tags": ["kitchen","independent","spelman"],
-      "points": [{"pX":-10.112417387113736,"pY":58.609669273391056,"pZ":-137.70492250552454,"pLat":23,"pLon":-94.2,"pName":"New South","pDescription":"New South houses The Program in Creative Writing."},{"pX":92.41960184836806,"pY":80.81561775102946,"pZ":86.18267297843933,"pLat":32.6,"pLon":43,"pName":"Spelman Hall","pDescription":"Spelman Hall is an apartment-like dormitory with private kitchens."},{"pX":107.62962864750595,"pY":37.30348307472824,"pZ":-97.59258777024735,"pLat":14.400000000000002,"pLon":-42.2,"pName":"Dinky Station","pDescription":"The Dinky connects connects the campus to Princeton Junction Station, which is on NJTransit and Amtrak rail lines."}],
+      "init": [{"pX":92.41960184836806,"pY":80.81561775102946,"pZ":86.18267297843933,"pLat":32.6,"pLon":43}],
+      "points": [{"pX":-10.112417387113736,"pY":58.609669273391056,"pZ":-137.70492250552454,"pLat":23,"pLon":-94.2,"pName":"New South","pDescription":"New South houses The Program in Creative Writing."},{"pX":107.62962864750595,"pY":37.30348307472824,"pZ":-97.59258777024735,"pLat":14.400000000000002,"pLon":-42.2,"pName":"Dinky Station","pDescription":"The Dinky connects connects the campus to Princeton Junction Station, which is on NJTransit and Amtrak rail lines."}],
       "lat": 40.344073, "long": -74.659096       
 }

@@ -3,9 +3,10 @@
       "next":3,
       "prev":2,
       "name":"Firestone Library",
-      "description": "Firestone Library is the hub of the Princeton University Library system, one of the largest open-stack collections in the United States.",
+      "description": "Firestone Library is one of the largest open-stack collections in the United States.",
       "tags": ["library","firestone"],
-      "points": [{"pX":-146.80098284278975,"pY":26.820332267452436,"pZ":15.170405843430746,"pLat":10.3,"pLon":-185.89999999999998,"pName":"Firestone Library","pDescription":"Firestone Library is one of the largest open-stack collections in the United States."},{"pX":-13.893148296221211,"pY":26.562711047937505,"pZ":-146.97415695353718,"pLat":10.200000000000001,"pLon":-95.39999999999998,"pName":"Chapel Exterior","pDescription":"The chapel is the third largest university chapel in the world"}, {"pX":87.0306255961311,"pY":37.30348307472824,"pZ":116.33623837325803,"pLat":14.4,"pLon":53.2,"pName":"East Pyne","pDescription":"East Pyne Hall is home to the Classics and Comparative Literature departments"}],
+      "init" :[{"pX":-146.80098284278975,"pY":26.820332267452436,"pZ":15.170405843430746,"pLat":10.3,"pLon":-185.89999999999998}],
+      "points": [{"pX":-13.893148296221211,"pY":26.562711047937505,"pZ":-146.97415695353718,"pLat":10.200000000000001,"pLon":-95.39999999999998,"pName":"Chapel Exterior","pDescription":"The chapel is the third largest university chapel in the world"}, {"pX":87.0306255961311,"pY":37.30348307472824,"pZ":116.33623837325803,"pLat":14.4,"pLon":53.2,"pName":"East Pyne","pDescription":"East Pyne Hall is home to the Classics and Comparative Literature departments"}],
       "lat": 40.349040, "long":  -74.657279 
 }
 

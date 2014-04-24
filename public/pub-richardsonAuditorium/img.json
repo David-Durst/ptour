@@ -5,6 +5,7 @@
       "name":"Richardson Auditorium",
       "description": "Richardson Auditorium in Alexander Hall is the premier performance venue on campus.",
       "tags": ["concert","performance","music","auditorium"],
-      "points": [{"pX":-71.4138796994185,"pY":77.03118780872552,"pZ":107.08059530584349,"pLat":30.900000000000002,"pLon":123.69999999999999,"pName":"Richardson Auditorium","pDescription":"Richardson Auditorium in Alexander Hall is the largest auditorium facility on campus."},{"pX":98.10005917414107,"pY":50.564288763462315,"pZ":101.585585059472,"pLat":19.700000000000003,"pLon":406.00000000000006,"pName":"Blair Hall","pDescription":"Blair Hall was the University's first collegiate Gothic dormitory."},{"pX":-10.132405027334297,"pY":71.11323135706746,"pZ":-131.68235528846773,"pLat":28.300000000000004,"pLon":265.6000000000001,"pName":"West College","pDescription":"West College is home to important administrative offices, including Deans of the College."}],
+      "init": [{"pX":-71.4138796994185,"pY":77.03118780872552,"pZ":107.08059530584349,"pLat":30.900000000000002,"pLon":123.69999999999999}],
+      "points": [{"pX":98.10005917414107,"pY":50.564288763462315,"pZ":101.585585059472,"pLat":19.700000000000003,"pLon":406.00000000000006,"pName":"Blair Hall","pDescription":"Blair Hall was the University's first collegiate Gothic dormitory."},{"pX":-10.132405027334297,"pY":71.11323135706746,"pZ":-131.68235528846773,"pLat":28.300000000000004,"pLon":265.6000000000001,"pName":"West College","pDescription":"West College is home to important administrative offices, including Deans of the College."}],
       "lat": 40.348095, "long": -74.660843
 }
