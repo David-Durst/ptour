@@ -203,8 +203,6 @@ Template.tour.engine = function (THREE, ret) {
         ret.getPrevNext();
 	ret.lat = 0.0
 	ret.lon = 0.0
-	//REMOVE THIS WHEN DONE
-        ret.scene.add(reticule);
     }
 
     return ret;
