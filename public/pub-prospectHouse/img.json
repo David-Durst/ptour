@@ -3,9 +3,10 @@
       "next":12,
       "prev":9,
       "name":"Prospect House",
-      "description": "Prospect House serves as a faculty and staff dining facility.",
+      "description": "Prospect House was the residence of the University president until 1968.",
       "tags": ["faculty","staff","prospect","president","garden"],
-      "points": [],
+      "init":[{"pX":23.02712785037281,"pY":74.77316096307459,"pZ":127.97939592978521,"pLat":29.900000000000002,"pLon":79.80000000000001}],
+      "points":[{"pX":-33.72182366608065, "pY":-26.305008913798044, "pZ":-143.7737288751974,"pLat":-10.1,"pLon":256.79999999999995,"pName":"Prospect Gardens","pDescription":"University President Woodrow Wilson's wife designed Prospect Gardens."}],
       "lat": 40.346811,  "long": -74.656578 
 }
 

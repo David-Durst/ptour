@@ -5,6 +5,6 @@
       "name":"University Chapel",
       "description": "The University Chapel is the third largest college chapel in the world.",
       "tags": ["religious","religion","service","choir","worship","weddings"],
-      "points": [],
+      "points": [{"pX":146.3692739233509,"pY":31.69871946830831,"pZ":-8.439599233409158,"pLat":12.200000000000001,"pLon":-3.3000000000000003,"pName":"Stained glass windows","pDescription":"The stained glass window over the altar depicts the Last Supper"},{"pX":-131.78123941940103,"pY":71.11323135706743,"pZ":8.752900264638255,"pLat":28.3,"pLon":-183.79999999999998,"pName":"Stained glass windows","pDescription":"The stained glass window over the main entrance depicts the Last Judgment "},{"pX":-1.1394185240843875,"pY":149.42920471376183,"pZ":-13.023613325019776,"pLat":85,"pLon":-94.99999999999997,"pName":"Chapel Ceiling","pDescription":"The chapel ceiling is 76-feet high."},{"pX":50.25184360005792,"pY":-47.84389639471051,"pZ":132.98764526288718,"pLat":-18.60000000000001,"pLon":69.30000000000003,"pName":"Oak Pews","pDescription":"The oak pews are made from wood originally intended for Civil Wood gun carriages."}],
       "lat": 40.348664, "long": -74.657430 
 }

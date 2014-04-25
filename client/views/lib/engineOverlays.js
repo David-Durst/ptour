@@ -1,4 +1,6 @@
 Template.tour.engineOverlays = function (THREE, ret) {
+    ret.closer = 0.7;
+
     ret.drawPOI = function(p) {
         var material = new THREE.MeshBasicMaterial( {
             map: THREE.ImageUtils.loadTexture('landing/icons/point_24x24.png'),
@@ -7,9 +9,9 @@ Template.tour.engineOverlays = function (THREE, ret) {
             color: 0x000000
         });
         var poi = new THREE.Mesh(new THREE.CircleGeometry(4,32), material);  
-        poi.position.x = p.pX;
-        poi.position.y = p.pY;
-        poi.position.z = p.pZ;
+        poi.position.x = p.pX * ret.closer;
+        poi.position.y = p.pY * ret.closer;
+        poi.position.z = p.pZ * ret.closer;
         poi.lookAt(ret.camera.position);
         poi.clickable = true;
         poi.point = p

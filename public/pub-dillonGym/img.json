@@ -5,6 +5,7 @@
       "name":"Dillon Gymnasium",
       "description": "Dillon Gymnasium is the non-varsity gym facility on campus.",
       "tags": ["exercise","gym","fitness","intramural","sports"],
-      "points": [],
+      "init": [{"pX":-93.57316922947535,"pY":99.39300723236063,"pZ":-62.16986499631369,"pLat":41.5,"pLon":-146.4}],
+      "points": [{"pX":-112.91740016023131,"pY":38.82285676537811,"pZ":90.78792063721436,"pLat":15,"pLon":-218.79999999999998,"pName":"Brown Hall","pDescription":"Brown Hall is an upperclass dormitory on campus."},{"pX":-21.361749220224386,"pY":58.609669273391056,"pZ":136.41327771854162,"pLat":23,"pLon":-261.09999999999997,"pName":"Dod Hall","pDescription":"Dod Hall is an upperclass dormitory on campus."}],
       "lat":40.346289,  "long":-74.659077 
 }

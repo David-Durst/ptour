@@ -9,13 +9,15 @@
 
     <div class="prev-next-nav">
       <button id="btn-prev-scene" onclick=Template.tour.changeLocationPrev()>Prev</button>
-      <button id="btn-rand-point" onclick=Template.tour.getRandomPoint()>Interest</button>
+      <button id="btn-rand-point" onclick=Template.tour.getNextInterest()>Interest</button>
       <button id="btn-next-scene" onclick=Template.tour.changeLocationNext()>Next</button>
-      <button onclick=Template.tour.setLocation()>Set Location</button>
+      {{#if isDebug}}
+        <button onclick=Template.tour.setLocation()>Set Location</button>
+      {{/if}}
 
     </div>
 
-    <div id="map_canvas"><img src="http://maps.googleapis.com/maps/api/staticmap?center={{url.lat.get}},{{url.lon.get}}&markers=color:blue%7clabel:{{url.id.get}}%7c{{url.lat.get}},{{url.lon.get}}&zoom=15&size=250x168&sensor=false&key=AIzaSyBpP2LXfAGeyD_hAQ6Nmce6axbt_QyE8VI" />
+    <div id="map_canvas"><img src="http://maps.googleapis.com/maps/api/staticmap?center={{url.lat.get}},{{url.lon.get}}&markers=color:blue%7c{{url.lat.get}},{{url.lon.get}}&zoom=15&size=250x168&sensor=false&key=AIzaSyBpP2LXfAGeyD_hAQ6Nmce6axbt_QyE8VI" />
     </div>
   </div>
 

@@ -6,6 +6,7 @@
       "description": "The Engineering Quadrangle contains 120 laboratories and over 125 faculty offices and graduate study spaces.",
       "tags": ["engineering","lab"],
       "points": [],
+      "init": [{"pX":-125.5337427689331,"pY":69.02996771757776,"pZ":-44.45382979377043,"pLat":27.4,"pLon":199.5}],
       "lat": 40.350582, "long": -74.651924 
 }
 

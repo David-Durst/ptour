@@ -30,3 +30,6 @@ Template.tour_overlaysLeft.url = {
     id : Template.tour_overlaysLeft.genDep()
 };
 
+Template.tour_overlaysLeft.isDebug = function () {
+    return Meteor.absoluteUrl().indexOf('localhost') != -1;
+}
