@@ -37,7 +37,7 @@ Template.tour.engine = function (THREE, ret) {
 
         ret.scene.add( mesh );
 
-        ret.renderer = new THREE.WebGLRenderer();
+        ret.renderer = Detector.webgl? new THREE.WebGLRenderer(): new THREE.CanvasRenderer();
         ret.renderer.setSize( window.innerWidth, window.innerHeight );
         container.appendChild( ret.renderer.domElement );
 
