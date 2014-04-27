@@ -1,6 +1,5 @@
 Template.tour.updateLeftOverlay = function () {
-    var curStop = Template.tour.data.StopList
-        .findOne({id:Template.tour.engine.curId()});
+    var curStop = Template.tour.engine.getCurStop();
     Template.tour_overlaysLeft.stop.title.set(curStop.name);
     Template.tour_overlaysLeft.stop.description.set(curStop.description);
     Template.tour_overlaysLeft.point.title.set('');
@@ -10,11 +9,25 @@ Template.tour.updateLeftOverlay = function () {
     Template.tour_overlaysLeft.url.id.set(Template.tour.engine.curId());
 }
 
+Template.tour.setFocus = function (arr, index) {
+    Template.tour.engine.lat = arr[index].pLat;
+    Template.tour.engine.lon = arr[index].pLon;
+}
+
+Template.tour.initFocus = function () {
+    var curStop = Template.tour.engine.getCurStop();
+    //init shouldn't be an array, but oh well
+    if (curStop.init !== undefined) {
+        Template.tour.setFocus(curStop.init, 0);
+    }
+}
+
 Template.tour.rendered = function() {
     var initEngine = function () {
         Template.tour.engine.init();
         Template.tour.engine.animate();
         Template.tour.engine.drawPoints();
+        Template.tour.initFocus();
         Template.tour_header.setUpAutoComplete();
         Template.tour.updateLeftOverlay();
     };
@@ -36,6 +49,7 @@ Template.tour.reloadLocation = function () {
     Template.tour.engine.changeImage();
     Template.tour.engine.drawPoints();
     Template.tour.changeAudio();
+    Template.tour.initFocus();
     Template.tour.updateLeftOverlay();
     Template.tour.interestId = 0;
 }
@@ -88,11 +102,6 @@ Template.tour.getNextInterest = function () {
     Template.tour_overlaysLeft.point.title.set(points[Template.tour.interestId].pName);
     Template.tour_overlaysLeft.point.description.set(points[Template.tour.interestId].pDescription);
     Template.tour.interestId = (Template.tour.interestId + 1) % points.length;
-}
-
-Template.tour.setFocus = function (arr, index) {
-    Template.tour.engine.lat = arr[index].pLat;
-    Template.tour.engine.lon = arr[index].pLon;
 }
 
 Template.tour.changeAudio = function () {

@@ -26,6 +26,12 @@ Template.tour.idManipulation = function (ret) {
         Session.set('locId', ret.nextId());
     }
 
+    //Return the object for the current stop
+    ret.getCurStop = function () {
+        return Template.tour.data.StopList
+            .findOne({id:ret.curId()});
+    }
+
     //get the image url's of the items
     ret.getPrevImgUrl = function () {
         return Template.tour.data.StopList.findOne(
