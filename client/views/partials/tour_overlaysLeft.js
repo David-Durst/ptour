@@ -1,4 +1,4 @@
-Template.tour_overlaysLeft.genDep = function (def) { 
+Template.tour_overlaysLeft.genDep = function (def) {
     def = typeof def !== 'undefined' ? def : '';
     return {
         value: '',
@@ -33,3 +33,41 @@ Template.tour_overlaysLeft.url = {
 Template.tour_overlaysLeft.isDebug = function () {
     return Meteor.absoluteUrl().indexOf('localhost') != -1;
 }
+
+/* Map locId to sceneId */
+Template.tour_overlaysLeft.graphIdToScene = {
+    '1': '#scene01',
+    '2': '#scene02',
+    '99': '#scene03',
+    '3': '#scene04',
+    '4': '#scene05',
+    '100': '#scene06',
+    '5': '#scene07',
+    '6': '#scene08',
+    '7': '#scene09',
+    '8': '#scene10',
+    '9': '#scene11',
+    '12': '#scene12',
+    '13': '#scene13',
+    '14': '#scene14',
+    '15': '#scene15'
+};
+
+Template.tour_overlaysLeft.prevNextControls = function(e) {
+    var currLocId = Template.tour.engine.curId();
+    var sceneId = Template.tour_overlaysLeft.graphIdToScene[currLocId];
+
+    console.log('currLocId: ' + currLocId);
+    console.log('sceneId: ' + sceneId);
+
+    Template.tour_tableContents.animateGraphWithId(e, sceneId);
+}
+
+Template.tour_overlaysLeft.events({
+    'click #btn-prev-scene':function(e) {
+        Template.tour_overlaysLeft.prevNextControls(e);
+    },
+    'click #btn-next-scene':function(e) {
+        Template.tour_overlaysLeft.prevNextControls(e);
+    }
+});
