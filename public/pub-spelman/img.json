@@ -2,7 +2,7 @@
       "id":15,
       "name":"Spelman Hall",
       "next":1,
-      "prev":13,
+      "prev":14,
       "description": "Spelman Hall is a popular dormitory for students interested in cooking for themselves.",
       "tags": ["kitchen","independent","spelman"],
       "init": [{"pX":30.515029977970258,"pY":75.2266105739186,"pZ":126.13401605833207,"pLat":30.1,"pLon":436.4}],

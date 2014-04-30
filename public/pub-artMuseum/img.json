@@ -1,8 +1,8 @@
 {
-      "id":14,
+      "id":20,
       "name":"Art Museum",
-      "next":15,
-      "prev":13,
+      "next":21,
+      "prev":19,
       "description": "The Princeton University Art Museum shares an entrance with McCormick Hall, which houses the Department of Art and Archeology.",
       "tags": ["art","museum","archeology"],
       "points": [],
