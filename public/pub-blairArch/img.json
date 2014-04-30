@@ -4,8 +4,8 @@
       "prev":99,
       "name":"Blair Arch",
       "description": "Blair Arch is a popular space for a cappella concerts.",
-      "tags": ["store","a cappella","gothic"],
+      "tags": ["store","a cappella","gothic","arch sing","career advising","job interviews","study abroad"],
       "init": [{"pX":-29.231993252850867,"pY":73.17894887080992, "pZ":-127.63358497131023,"pLat":29.200000000000003, "pLon":-102.9}],
-      "points": [{"pX":-112.7514691679473,"pY":43.10407797745681,"pZ":89.04574477302522,"pLat":16.700000000000003,"pLon":-218.3,"pName":"Blair Hall","pDescription":"Blair Hall was the University's first collegiate Gothic dormitory."},{"pX":65.38369900520237,"pY":-9.679846237943686,"pZ":134.65241357364104,"pLat":-3.6999999999999975,"pLon":-295.90000000000003,"pName":"U-Store","pDescription":"The Princeton University Store, better known as the U-Store, is on the first floor."},{"pX":61.86322645243482,"pY":15.679269490148016,"pZ":135.74646117357932,"pLat":6.0000000000000036,"pLon":-294.50000000000006,"pName":"Career Services ","pDescription":"On the upper floors are the Offices of Career Services and International Programs."}],
+      "points": [{"pX":-112.7514691679473,"pY":43.10407797745681,"pZ":89.04574477302522,"pLat":16.700000000000003,"pLon":-218.3,"pName":"Blair Hall","pDescription":"Blair Hall is the University's oldest collegiate Gothic dormitory."},{"pX":65.38369900520237,"pY":-9.679846237943686,"pZ":134.65241357364104,"pLat":-3.6999999999999975,"pLon":-295.90000000000003,"pName":"U-Store","pDescription":"The Princeton University Store, better known as the U-Store, is on the first floor."},{"pX":61.86322645243482,"pY":15.679269490148016,"pZ":135.74646117357932,"pLat":6.0000000000000036,"pLon":-294.50000000000006,"pName":"Career Services","pDescription":"The upper floors house the Offices of Career Services and International Programs."}],
       "lat": 40.347364, "long": -74.661024 
 }

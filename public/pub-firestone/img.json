@@ -4,8 +4,8 @@
       "prev":2,
       "name":"Firestone Library",
       "description": "Firestone Library is one of the largest open-stack collections in the United States.",
-      "tags": ["library","firestone"],
+      "tags": ["library","research"],
       "init" :[{"pX":-109.03934318149027,"pY":86.89217585140183,"pZ":55.31881609686031,"pLat":35.400000000000006,"pLon":153.10000000000005}],
-      "points": [{"pX":0.7951005949918136,"pY":97.61613258987765,"pZ":-113.88792066430604,"pLat":40.60000000000001,"pLon":-89.59999999999997,"pName":"Chapel Exterior","pDescription":"The chapel is the third largest university chapel in the world"}, {"pX":131.85233750896802,"pY":45.85429574446589,"pZ":54.88483082965856,"pLat":17.800000000000004,"pLon":22.600000000000037,"pName":"East Pyne","pDescription":"East Pyne Hall is home to the Classics and Comparative Literature departments"}],
+      "points": [{"pX":0.7951005949918136,"pY":97.61613258987765,"pZ":-113.88792066430604,"pLat":40.60000000000001,"pLon":-89.59999999999997,"pName":"Chapel Exterior","pDescription":"The chapel is the third largest university chapel in the world."}, {"pX":131.85233750896802,"pY":45.85429574446589,"pZ":54.88483082965856,"pLat":17.800000000000004,"pLon":22.600000000000037,"pName":"East Pyne","pDescription":"East Pyne Hall is home to several humanities departments, including Classics and Comparative Literature."}],
       "lat": 40.349040, "long":  -74.657279 
 }
