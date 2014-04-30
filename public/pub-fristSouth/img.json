@@ -3,8 +3,8 @@
    "next":12,
    "prev":10,
       "name":"Frist Campus Center",
-      "description": "Frist Campus Center is a hub of student and community life, hosting a variety of social and student government programs.",
-      "tags": ["center","food","government","student","mail"],
+      "description": "Frist Campus Center is a hub of student and community life; it hosts a variety of social and student government programs.",
+      "tags": ["center","food","student government","Women's Center","coffee","LGBT Center","East Asian Library"],
       "points": [{"pX":31.865428253303048,"pY":52.285807098272294,"pZ":136.9335198492898,"pLat":20.4,"pLon":76.9,"pName":"McCosh Health Center","pDescription":"The Health Center is named after Isabella McCosh, wife of University President James McCosh."},{"pX":129.6611044654193,"pY":65.75567201836161,"pZ":-36.934937203429435,"pLat":26,"pLon":-15.899999999999991,"pName":"Guyot Hall","pDescription":"Guyot Hall is home to the departments of Ecology and Evolutionary Biology and Geosciences."}],
       "init":[{"pX":-142.97125633065338,"pY":32.97693065292563,"pZ":31.172775108205286,"pLat":12.700000000000001,"pLon":167.70000000000002}],
       "lat": 40.347099, "long": -74.655416    
