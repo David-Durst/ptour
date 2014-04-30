@@ -112,3 +112,4 @@ Template.tour.changeAudio = function () {
     audio.load();
     audio.play();
 }
+

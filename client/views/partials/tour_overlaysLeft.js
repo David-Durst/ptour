@@ -38,15 +38,15 @@ Template.tour_overlaysLeft.isDebug = function () {
 Template.tour_overlaysLeft.graphIdToScene = {
     '1': '#scene01',
     '2': '#scene02',
-    '99': '#scene03',
-    '3': '#scene04',
-    '4': '#scene05',
-    '100': '#scene06',
-    '5': '#scene07',
-    '6': '#scene08',
-    '7': '#scene09',
-    '8': '#scene10',
-    '9': '#scene11',
+    '3': '#scene03',
+    '4': '#scene04',
+    '5': '#scene05',
+    '6': '#scene06',
+    '7': '#scene07',
+    '8': '#scene08',
+    '9': '#scene09',
+    '10': '#scene10',
+    '11': '#scene11',
     '12': '#scene12',
     '13': '#scene13',
     '14': '#scene14',
@@ -59,6 +59,7 @@ Template.tour_overlaysLeft.prevNextControls = function(e) {
 
     Template.tour_tableContents.animateGraphWithId(e, sceneId);
 }
+
 
 Template.tour_overlaysLeft.events({
     'click #btn-prev-scene':function(e) {
