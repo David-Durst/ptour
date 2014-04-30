@@ -32,24 +32,35 @@
 .info {
   height: 50%;
   width: 100%;
-  padding-left: 0.2em;
-  padding-right: 0.2em;
-  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.info .default-info {
+  text-align: left;
+}
+.info .interest {
+  text-align: left;
+  color: #eaeaea;
 }
 .info h2, h3, p {
   color: #ffffff;
 }
 .info h2 {
   font-size: 30px;
-  font-weight: 400;
-  margin-bottom: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 .info h3 {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 400;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 .info p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.info p.interest {
   font-size: 15px;
   font-weight: 300;
 }
@@ -129,6 +140,8 @@ ul.ui-autocomplete .ui-menu-item:hover
 }
 
 .prev-next-nav button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     display: inline-block;
     text-transform: uppercase;
     overflow:visible; /* Shrinkwrap the text in IE7- */
@@ -142,8 +155,6 @@ ul.ui-autocomplete .ui-menu-item:hover
     text-decoration:underline; /* Make it look linky */
     cursor:pointer; /* Buttons don’t make the cursor change in all browsers */
     -moz-user-select:text; /* Make button text selectable in Gecko */
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
 }
 /* Make sure keyboard users get visual feedback */
 .prev-next-nav button:hover,
@@ -165,14 +176,31 @@ ul.ui-autocomplete .ui-menu-item:hover
   float: right;
   margin-right: 1em;
 }
+#btn-rand-point {
+  position: absolute;
+  float: left;
+  left: 37%;
+}
+#debug-btn-set-loc {
+  position: absolute;
+  top: 262px;
+  left: 0px;
+  margin-left: 1em;
+}
 
-/*********** Audio styles ************/
 #audio {
   position:fixed;
   bottom:1%;
   right:1%;
   z-index:1000;
 }
+
+// .interest {
+//   -webkit-transition: all .4s cubic-bezier(0.4,0.0,0.2,1);
+//   -moz-transition: all .4s cubic-bezier(0.4,0.0,0.2,1);
+//   -o-transition: all .4s cubic-bezier(0.4,0.0,0.2,1);
+//   transition: all .4s cubic-bezier(0.4,0.0,0.2,1);
+// }
 
 @media (max-width: 780px) {
   .prev-next-nav {
@@ -181,7 +209,7 @@ ul.ui-autocomplete .ui-menu-item:hover
     left: 0%;
     margin-top: 1.3em;
   }
-  #btn-prev-scene, #btn-rand-scene, #btn-next-scene {
+  #btn-prev-scene, #btn-rand-scene, #btn-next-scene, {
     -webkit-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
     -moz-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
     -o-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
@@ -203,14 +231,16 @@ ul.ui-autocomplete .ui-menu-item:hover
   }
   #debug-btn-set-loc {
     float: left;
-    left: 40em;
     position: absolute;
-    width: 7em;
+    left: 37em;
+    top: 0em;
+    width: 8em;
   }
 
   #map_canvas {
     bottom: 5.2em;
   }
+
   #audio {
     -webkit-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);
     -moz-transition: all .2s cubic-bezier(0.4,0.0,0.2,1);

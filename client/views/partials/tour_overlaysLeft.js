@@ -57,9 +57,6 @@ Template.tour_overlaysLeft.prevNextControls = function(e) {
     var currLocId = Template.tour.engine.curId();
     var sceneId = Template.tour_overlaysLeft.graphIdToScene[currLocId];
 
-    console.log('currLocId: ' + currLocId);
-    console.log('sceneId: ' + sceneId);
-
     Template.tour_tableContents.animateGraphWithId(e, sceneId);
 }
 
@@ -69,5 +66,8 @@ Template.tour_overlaysLeft.events({
     },
     'click #btn-next-scene':function(e) {
         Template.tour_overlaysLeft.prevNextControls(e);
+    },
+    'click #btn-rand-point':function(e) {
+        $(".interest").hide().slideDown(700, "easeOutElastic");
     }
 });
