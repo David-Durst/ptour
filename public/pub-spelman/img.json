@@ -3,8 +3,8 @@
       "name":"Spelman Hall",
       "next":1,
       "prev":14,
-      "description": "Spelman Hall is a popular dormitory for students interested in cooking for themselves.",
-      "tags": ["kitchen","independent","spelman"],
+      "description": "Spelman Hall is a popular apartment-style dormitory for students interested in cooking for themselves.",
+      "tags": ["kitchen","independent","apartment"],
       "init": [{"pX":30.515029977970258,"pY":75.2266105739186,"pZ":126.13401605833207,"pLat":30.1,"pLon":436.4}],
       "points": [{"pX":34.05630166095804,"pY":51.79472984978021, "pZ":-136.5923653685158,"pLat":20.200000000000003,"pLon":284,"pName":"New South","pDescription":"New South houses The Program in Creative Writing."},{"pX":135.00574353709516,"pY":30.41809430347687,"pZ":-57.863535589703496,"pLat":11.700000000000003,"pLon":336.8,"pName":"Dinky Station","pDescription":"The Dinky connects connects the campus to Princeton Junction Station, which is on NJTransit and Amtrak rail lines."}],
       "lat": 40.344073, "long": -74.659096       
