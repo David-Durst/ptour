@@ -3,10 +3,10 @@
       "next":14,
       "prev":12,
       "name":"Woodrow Wilson School",
-      "description": "The School of Public and International Affairs, also known as \"Woody Woo\", is designed to prepare students for careers in public service.",
-      "tags": ["international","woody","woodrow","wilson"],
+      "description": "The School of Public and International Affairs, also known as \"Woody Woo\", prepares students for careers in public service.",
+      "tags": ["international affairs","Woody Woo","public service","policy"],
       "init": [{"pX":-22.058862291598384,"pY":102.29975400937478, "pZ":-107.46239772135046,"pLat":43.00000000000001,"pLon":-101.60000000000002}],
-      "points": [{"pX":140.8855828228142,"pY":38.82285676537811,"pZ":-33.82363589638015,"pLat":15,"pLon":-13.5,"pName":"Fisher Hall","pDescription":"Fisher Hall is home of the Economics department."}],
+      "points": [{"pX":140.8855828228142,"pY":38.82285676537811,"pZ":-33.82363589638015,"pLat":15,"pLon":-13.5,"pName":"Fisher Hall","pDescription":"Fisher Hall is home to the Economics department."}],
       "lat": 40.348178, "long": -74.654542    
 }
 
