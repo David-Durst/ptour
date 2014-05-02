@@ -9,9 +9,18 @@ Template.tour.updateLeftOverlay = function () {
     Template.tour_overlaysLeft.url.id.set(Template.tour.engine.curId());
 }
 
+//set camera to focus immediately
 Template.tour.setFocus = function (arr, index) {
     Template.tour.engine.lat = arr[index].pLat;
     Template.tour.engine.lon = arr[index].pLon;
+}
+
+//set camera to travel there
+Template.tour.travelFocus = function (arr, index) {
+    Template.tour.engine.targetLat = arr[index].pLat;
+    Template.tour.engine.targetLon = arr[index].pLon;
+    Template.tour.engine.travelLonToTarget = true;
+    Template.tour.engine.travelLatToTarget = true;
 }
 
 Template.tour.initFocus = function () {
@@ -98,7 +107,7 @@ Template.tour.setLocation = function (name, description) {
 Template.tour.getNextInterest = function () {
     var points =
         Template.tour.data.StopList.findOne({id: Session.get('locId')}).points;
-    Template.tour.setFocus(points, Template.tour.interestId);
+    Template.tour.travelFocus(points, Template.tour.interestId);
     Template.tour_overlaysLeft.point.title.set(points[Template.tour.interestId].pName);
     Template.tour_overlaysLeft.point.description.set(points[Template.tour.interestId].pDescription);
     Template.tour.interestId = (Template.tour.interestId + 1) % points.length;

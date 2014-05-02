@@ -1,5 +1,9 @@
 Template.tour.engine = function (THREE, ret) {
 
+    //TravelToTarget is whether we are rotating to a target in lat or long. 
+    ret.travelLonToTarget = false, ret.travelLatToTarget = false;
+    ret.travelRate = 2;
+    ret.targetLon = 0, ret.targetLat = 0;
     ret.onPointerDownPointerX = 0, ret.onPointerDownPointerY = 0, ret.lon = 0, ret.onPointerDownLon = 0, ret.lat = 0, ret.onPointerDownLat = 0, ret.phi = 0, ret.theta = 0, ret.rho = 500, ret.rhoRatio = 0.3;
 
     ret.pointClicked = function (intersects) {
@@ -69,6 +73,10 @@ Template.tour.engine = function (THREE, ret) {
         event.preventDefault();
 
         ret.isUserInteracting = true;
+
+        //Stop moving if they click
+        ret.travelLonToTarget = 0;
+        ret.travelLatToTarget = 0;
 
         ret.onPointerDownPointerX = event.clientX;
         ret.onPointerDownPointerY = event.clientY;
@@ -151,13 +159,63 @@ Template.tour.engine = function (THREE, ret) {
 
     }
 
+    function normalizeDegrees (lon) {
+        //get it in -360 to 0 or 0 to 360 form
+        var twoRotations = lon % 360;
+        //if 0 to 360, good, otherwise flip it
+        if (twoRotations >= 0) {
+            return twoRotations;
+        }
+        else {
+            return twoRotations + 360;
+        }
+    }
+
+    //return positive or if right, negative if left
+    function leftOrRight (curLon, newLon) {
+        if (newLon < curLon) {
+            newLon += 360;
+        }
+        if (curLon + 180 >= newLon) {
+            return ret.travelRate;
+        }
+        else {
+            return -1*ret.travelRate;
+        }
+    }
+
     function update() {
 
-        if ( ret.isUserInteracting === false ) {
-
-            //set to 0.1 ofr default rotation, but this bugs me.
-            ret.lon += 0.0;
-
+        if (ret.travelLonToTarget) {
+            //normalize it to a circle from 0 to 360
+            var normalTargetLon = normalizeDegrees(ret.targetLon);
+            var normalCurLon = normalizeDegrees(ret.lon);
+            //set 0 to current position, if within 180 degrees, move left
+            //else move right
+            var movAmnt = leftOrRight(normalCurLon, normalTargetLon);
+            if (movAmnt + normalCurLon < normalTargetLon - ret.travelRate || 
+                movAmnt + normalCurLon > normalTargetLon + ret.travelRate ) {
+                ret.lon += movAmnt;
+            }
+            else {
+                ret.lon = ret.targetLon;
+                ret.travelLonToTarget = false;
+            }
+        }
+        else if (ret.travelLatToTarget) {
+            var movAmnt = ret.targetLat > ret.lat ? ret.travelRate : -1*ret.travelRate;
+            if (movAmnt + ret.lat < ret.targetLat - ret.travelRate || 
+                movAmnt + ret.lat > ret.targetLat + ret.travelRate ) {
+                ret.lat += movAmnt;
+            }
+            else {
+                ret.lat = ret.targetLat;
+                ret.travelLatToTarget = false;
+            }
+        }
+        else {
+            ret.travelLonToTarget = false;
+            ret.travelLatToTarget = false;
         }
 
         ret.lat = Math.max( - 85, Math.min( 85, ret.lat ) );
