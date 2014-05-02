@@ -11,7 +11,7 @@
 }
 
 .overlays-left {
-  width: 275px;
+  width: 303px;
   height: 490px;
   position: absolute;
   display: block;
@@ -30,7 +30,9 @@
 }
 
 .info {
-  height: 50%;
+  position: relative;
+  top: -0.6em;
+  height: 51%;
   width: 100%;
   padding-left: 1em;
   padding-right: 1em;
@@ -56,9 +58,9 @@
   margin-bottom: 6px;
 }
 .info p {
-  font-size: 18px;
+  font-size: 17.4px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .info p.interest {
   font-size: 15px;
@@ -69,10 +71,9 @@
   position: absolute;
   bottom: 0.92em;
   left: 0.88em;
-  background-color:rgba(220,220,220,1.0); // when we actually get map, change background to below
-  // background-color: rgba(54,54,54,0.4);
+  background-color:rgba(220,220,220,1.0);
   height: 168px;
-  width: 250px;
+  width: 278px;
   margin: auto;
 }
 
@@ -105,17 +106,12 @@
     position: absolute;
     bottom: 7.66em;
     left: 0.88em;
-    background-color:rgba(220,220,220,1.0); // when we actually get map, change background to below
-    // background-color: rgba(54,54,54,0.4);
-    // 490px by 275px parent div dimension
+    background-color:rgba(220,220,220,1.0);
     height: 168px;
     width: 250px;
     margin: auto;
   }
 }
-/* With this transition, the element is still here, just opaque.
-This wouldn't be a problem, unless we put the next/prev controls
-there as well. */
 
 ul.ui-autocomplete
 {
@@ -184,7 +180,7 @@ ul.ui-autocomplete .ui-menu-item:hover
 #debug-btn-set-loc {
   position: absolute;
   top: 262px;
-  left: 0px;
+  right: 1em;
   margin-left: 1em;
 }
 

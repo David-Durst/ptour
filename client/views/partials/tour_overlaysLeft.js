@@ -69,6 +69,6 @@ Template.tour_overlaysLeft.events({
         Template.tour_overlaysLeft.prevNextControls(e);
     },
     'click #btn-rand-point':function(e) {
-        $(".interest").hide().slideDown(700, "easeOutElastic");
+        $(".interest").hide().slideDown(700, "easeOutBack");
     }
 });
