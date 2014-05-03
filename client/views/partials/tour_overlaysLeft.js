@@ -56,8 +56,10 @@ Template.tour_overlaysLeft.graphIdToScene = {
 Template.tour_overlaysLeft.prevNextControls = function(e) {
     var currLocId = Template.tour.engine.curId();
     var sceneId = Template.tour_overlaysLeft.graphIdToScene[currLocId];
-
     Template.tour_tableContents.animateGraphWithId(e, sceneId);
+    // Reset play/pause button for audio
+    $("#btn-pause").show();
+    $("#btn-play").hide();
 }
 
 
@@ -70,5 +72,15 @@ Template.tour_overlaysLeft.events({
     },
     'click #btn-rand-point':function(e) {
         $(".interest").hide().slideDown(700, "easeOutBack");
+    },
+    'click #btn-pause':function(e) {
+        $("#audio").trigger("pause");
+        $("#btn-pause").toggle();
+        $("#btn-play").toggle();
+    },
+    'click #btn-play':function(e) {
+        $("#audio").trigger("play");
+        $("#btn-play").toggle();
+        $("#btn-pause").toggle();
     }
 });

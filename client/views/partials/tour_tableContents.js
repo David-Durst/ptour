@@ -24,6 +24,9 @@ Template.tour_tableContents.animateGraph = function(e) {
     var offset = "" + Math.abs(diff);
 
     Template.tour_tableContents.translateGraphItems(elemId,diff,offset);
+    // Reset play/pause button for audio
+    $("#btn-pause").show();
+    $("#btn-play").hide();
 }
 
 Template.tour_tableContents.animateGraphWithId = function(e, sceneId) {

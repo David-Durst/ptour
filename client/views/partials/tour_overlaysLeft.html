@@ -22,24 +22,22 @@
   </div>
 
 
-  <!-- <button id="playbutton" onclick="togglePlay();">Pause</button>
-    <audio id="audio">
-        <source id='mp3Source' type='audio/mpeg' />
+  <div class="audio-section">
+    <button id="btn-pause"><i class="glyphicon glyphicon-pause"></i></button>
+    <button id="btn-play"><i class="glyphicon glyphicon-play"></i></button>
+    <audio id="audio" controls>
+      Sorry. Your browser does not support the audio element.
+      <source id="mp3Source" type="audio/mpeg">
+      <embed height="50" width="300">
     </audio>
-  pause!</a> -->
-
-  <audio id="audio" controls>
-    Sorry. Your browser does not support the audio element.
-    <source id="mp3Source" type="audio/mpeg">
-    <embed height="50" width="300">
-  </audio>
-  <audio id="prevAudio" display="none">
-    Sorry. Your browser does not support the audio element.
-    <source id="prevMp3Source" type="audio/mpeg">
-  </audio>
-  <audio id="nextAudio" display="none">
-    Sorry. Your browser does not support the audio element.
-    <source id="nextMp3Source" type="audio/mpeg">
-  </audio>
+    <audio id="prevAudio" display="none">
+      Sorry. Your browser does not support the audio element.
+      <source id="prevMp3Source" type="audio/mpeg">
+    </audio>
+    <audio id="nextAudio" display="none">
+      Sorry. Your browser does not support the audio element.
+      <source id="nextMp3Source" type="audio/mpeg">
+    </audio>
+  </div>
 
 </template>
