@@ -14,11 +14,7 @@ Template.tour_header.setUpAutoComplete = function () {
 	    var stopName = ui.item.value.split(', ')[1];
 	    var id = Template.tour.data.StopList.findOne(
 		{name:stopName}).id;
-	    Session.set('locId', id);
-	    Template.tour.engine.changeImage();
-	    Template.tour.engine.drawPoints();
-	    Template.tour.changeAudio();
-	    Template.tour.updateLeftOverlay();
+	    Template.tour.changeLocation(id);
 	}
     });
 
