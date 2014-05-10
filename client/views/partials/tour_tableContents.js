@@ -38,25 +38,48 @@ Template.tour_tableContents.animateGraphWithId = function(e, sceneId) {
     Template.tour_tableContents.translateGraphItems(sceneId,diff,offset);
 }
 
+Template.tour_tableContents.LEFT_CLICKS = 0;
+Template.tour_tableContents.RIGHT_CLICKS = 5;
+
 Template.tour_tableContents.events({
   'click .graph-item':function(e){
     Template.tour_tableContents.animateGraph(e)
   },
   'click #control-left':function(e) {
     var LTHRESHOLD = 22;
-    if ($("#scene01").offset().left < LTHRESHOLD) {
-      $(".graph-item").animate({
-        left: "+=300px",
-      }, 800, "easeInOutExpo" );
+    if (Template.tour_tableContents.LEFT_CLICKS != 0) {
+        if ($("#scene01").offset().left <= LTHRESHOLD ) {
+            $(".graph-item").animate({
+                left: "+=300px"
+            },
+            {
+                queue: false,
+                duration: 400
+            },
+            200, "easeInOutExpo" );
+        }
     }
+    Template.tour_tableContents.LEFT_CLICKS -= 1;
+    Template.tour_tableContents.RIGHT_CLICKS += 1;
+    e.stopImmediatePropagation();
   },
   'click #control-right':function(e) {
     var RTHRESHOLD = $(window).width() * 0.85;
-    if ($("#scene15").offset().left > RTHRESHOLD) {
-      $(".graph-item").animate({
-        left: "-=300px",
-      }, 800, "easeInOutExpo" );
+    if (Template.tour_tableContents.RIGHT_CLICKS != 0) {
+        if ($("#scene15").offset().left >= RTHRESHOLD ) {
+            $(".graph-item").animate({
+                left: "-=300px",
+            },
+            {
+                queue: false,
+                duration: 400
+            },
+            200, "easeInOutExpo" );
+        }
     }
+    Template.tour_tableContents.RIGHT_CLICKS -= 1;
+    Template.tour_tableContents.LEFT_CLICKS += 1;
+
   }
 
 });
