@@ -13,6 +13,11 @@ Router.map(function () {
       template: 'about'
     });
 
+    this.route('features', {
+      path: '/features',
+      template: 'features'
+    });
+
     this.route('contact', {
       path: '/contact',
       template: 'contact'
